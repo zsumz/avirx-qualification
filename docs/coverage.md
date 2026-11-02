@@ -20,7 +20,13 @@ The contract authority is the baseline source's `docs/api.md`, `runtime.md`, `po
 | Custom transport | Supplied signal and redirect metadata; responsibility to honor transport behavior, public native resource ownership | policies |
 | Actual application flows | Expired-token refresh, immutable multipart derivation, streaming cancellation, mutation with cache invalidation | HTTP + browser |
 | Generative/repeatability | Bounded seeded unicode/path/query and policy interaction combinations, five seed lanes, named failures and bounded URL reducer when applicable | HTTP + policies + soak |
-| Compatibility | Full Node22/24/26, basic Node18.17.0; strict TS5.0.4/5.9.3/7.0.2; Chromium/Firefox/WebKit native installed-bundle consumers | CI + local reports |
+| Compatibility | Full Node 22/24/26, basic Node18.17.0; strict TS 5.0.4/5.9.3/7.0.2; Chromium/Firefox/WebKit native installed-bundle consumers | CI + local reports |
 | cURL | Literal argv parser + execFile, exact local wire bytes/content type/empty headers/quoting; binary/multipart/NUL omission rules | HTTP |
 
 Each row names exercised examples, not every permutation. Cache invalidation across every possible preflight stage, real clock suspension, Retry-After's 60-second clamp under real elapsed time, transport pool internals, every error body/MIME combination and memory retention under long-running production load remain bounded or partial coverage. Keep product unit/architecture/coverage/package release checks alongside this suite.
+
+## Second adversarial pass
+
+The original 398-line review was read in full and mapped in [review-matrix.md](review-matrix.md). The suite now has658 base HTTP/policy cases:347 initial checks,195 native-oracle adversarial cases,108 phase/race cases and 8 own-contract-key cases. There are37 native checks per browser, including hidden CORS Vary,302/307chains and active-buffer cancellation. These counts identify scope, not a correctness proof.
+
+The second review required actual206/304/412responses and received-header assertions for conditional cache tests; native positive controls for blocked redirects; shared URL keys and authoritative post-mutation checks for192-operation stress; and explicit pending-body phase evidence. All were added. Retry-After seconds/date clamp is checked through retry metadata plus immediateabort; the suite does not wait60-seconds. Header-duration clocks now have forward/back wall-shift checks. Source/suite/content hashes prevent old reports from satisfying new review gates.

@@ -1,0 +1,502 @@
+{
+  "schemaVersion": 1,
+  "sourceReview": {
+    "title": "Supplied detailed review of e8e6c12",
+    "lines": 398,
+    "publicDisposition": "https://github.com/zsumz/avirx/blob/1992ffba1b9fca800196b6fd8a0912cc8a9ddf16/docs/review-pass-2026-11.md"
+  },
+  "rows": [
+    {
+      "id": "F1",
+      "reviewLines": [
+        13,
+        34
+      ],
+      "concern": "Protected custom credentials, full redirect chains and explicit trust",
+      "nodePatterns": [
+        "^ADV-REDIRECT-default-",
+        "^ADV-REDIRECT-trusted-",
+        "^ADV-REDIRECT-native-"
+      ],
+      "browserIds": [
+        "B-008",
+        "B-009",
+        "B-010",
+        "B-030",
+        "B-031"
+      ],
+      "compilers": [],
+      "limits": "301/302/303/307/308 and two-hop chains; native Fetch owns redirect rewriting/Authorization stripping."
+    },
+    {
+      "id": "F2",
+      "reviewLines": [
+        35,
+        74
+      ],
+      "concern": "Conditional/range reads and writes preserve actual HTTP semantics",
+      "nodePatterns": [
+        "^RACE-COND-Range-",
+        "^RACE-COND-If-Range-",
+        "^RACE-COND-If-Match-",
+        "^RACE-COND-If-None-Match-",
+        "^RACE-COND-If-Modified-Since-",
+        "^RACE-COND-If-Unmodified-Since-"
+      ],
+      "browserIds": [],
+      "compilers": [],
+      "limits": "24 warm/reverse/presence cases assert received fields,206/304/412/200 and exact bytes; cache is not an RFC revalidation engine."
+    },
+    {
+      "id": "F3",
+      "reviewLines": [
+        75,
+        107
+      ],
+      "concern": "Final body bytes, explicit versus inferred MIME and native multipart boundaries",
+      "nodePatterns": [
+        "^body replacement ",
+        "^ADV-BODY-"
+      ],
+      "browserIds": [
+        "B-004",
+        "B-005",
+        "B-036"
+      ],
+      "compilers": [],
+      "limits": "64 pair transitions plus derived POST/PUT/native controls and explicit MIME; arbitrary chain length is not exhaustive."
+    },
+    {
+      "id": "F4",
+      "reviewLines": [
+        108,
+        141
+      ],
+      "concern": "Relative/absolute/base/root/query/trailing separator fidelity",
+      "nodePatterns": [
+        "^base prefix",
+        "^ADV-URL-join-",
+        "^ADV-URL-static-data-"
+      ],
+      "browserIds": [
+        "B-002"
+      ],
+      "compilers": [],
+      "limits": "Finite examples; not every interleaving."
+    },
+    {
+      "id": "F5",
+      "reviewLines": [
+        142,
+        171
+      ],
+      "concern": "Sibling AvirxError cancellation belongs to current operation",
+      "nodePatterns": [
+        "^RACE-ABORT-pre-aborted:",
+        "^RACE-ABORT-auth:",
+        "^RACE-ABORT-contract input:",
+        "^RACE-ABORT-request hook:",
+        "^RACE-ABORT-native fetch:",
+        "^RACE-ABORT-concurrency:",
+        "^RACE-ABORT-rate:",
+        "^RACE-ABORT-retry:",
+        "^RACE-ABORT-buffered body:",
+        "^RACE-ABORT-native-body:"
+      ],
+      "browserIds": [
+        "B-019",
+        "B-020",
+        "B-033",
+        "B-034",
+        "B-035"
+      ],
+      "compilers": [],
+      "limits": "Observable stages and barriers; native Response body errors retain platform ownership."
+    },
+    {
+      "id": "F6",
+      "reviewLines": [
+        172,
+        206
+      ],
+      "concern": "Strict unknown-property rejection and generic builder assignability",
+      "nodePatterns": [],
+      "browserIds": [],
+      "compilers": [
+        "5.0.4",
+        "5.9.3",
+        "7.0.2"
+      ],
+      "limits": "Strict DOM NodeNext consumers, noUncheckedIndexedAccess=false;25 negative assertions plus generic helpers."
+    },
+    {
+      "id": "S1",
+      "reviewLines": [
+        213,
+        213
+      ],
+      "concern": "Reserved then rejects without Promise assimilation or transport",
+      "nodePatterns": [
+        "^KEYS-THEN-"
+      ],
+      "browserIds": [],
+      "compilers": [
+        "5.0.4",
+        "5.9.3",
+        "7.0.2"
+      ],
+      "limits": "Finite examples; not every interleaving."
+    },
+    {
+      "id": "S2",
+      "reviewLines": [
+        214,
+        214
+      ],
+      "concern": "Own symbol contract keys reject instead of disappearing",
+      "nodePatterns": [
+        "^KEYS-SYMBOL-"
+      ],
+      "browserIds": [],
+      "compilers": [
+        "5.0.4",
+        "5.9.3",
+        "7.0.2"
+      ],
+      "limits": "Finite examples; not every interleaving."
+    },
+    {
+      "id": "S3",
+      "reviewLines": [
+        215,
+        215
+      ],
+      "concern": "Unsafe placeholder names cannot hide a second dot segment",
+      "nodePatterns": [
+        "^ADV-URL-invalid-placeholder-",
+        "^ADV-URL-valid-placeholder-"
+      ],
+      "browserIds": [
+        "B-037"
+      ],
+      "compilers": [
+        "5.0.4",
+        "5.9.3",
+        "7.0.2"
+      ],
+      "limits": "Finite examples; not every interleaving."
+    },
+    {
+      "id": "S4",
+      "reviewLines": [
+        216,
+        216
+      ],
+      "concern": "Elapsed cache/rate/duration clocks differ from wall-clock dates",
+      "nodePatterns": [
+        "^cache TTL and rate windows survive",
+        "^ADV-CLOCK-native-headers-wall-shift-",
+        "^RACE-RETRY-AFTER-"
+      ],
+      "browserIds": [],
+      "compilers": [],
+      "limits": "Forward/back wall shifts and bounded Retry-After seconds/date/clamp metadata with abort; no 60-second sleep or host suspend proof."
+    },
+    {
+      "id": "S5",
+      "reviewLines": [
+        217,
+        217
+      ],
+      "concern": "URL userinfo rejects before transport and diagnostic leakage",
+      "nodePatterns": [
+        "^URL credentials reject",
+        "^ADV-URL-userinfo-"
+      ],
+      "browserIds": [],
+      "compilers": [],
+      "limits": "Finite examples; not every interleaving."
+    },
+    {
+      "id": "S6",
+      "reviewLines": [
+        218,
+        218
+      ],
+      "concern": "Awaited path schema outputs match exact runtime keys",
+      "nodePatterns": [
+        "^KEYS-ASYNC-PATH"
+      ],
+      "browserIds": [],
+      "compilers": [
+        "5.0.4",
+        "5.9.3",
+        "7.0.2"
+      ],
+      "limits": "Finite examples; not every interleaving."
+    },
+    {
+      "id": "C1",
+      "reviewLines": [
+        226,
+        243
+      ],
+      "concern": "Stable operation error kinds and current request metadata",
+      "nodePatterns": [
+        "^operation errors have stable kinds",
+        "^decode failures and schema validation failures",
+        "^HTTP error schemas await"
+      ],
+      "browserIds": [
+        "B-022"
+      ],
+      "compilers": [],
+      "limits": "Finite examples; not every interleaving."
+    },
+    {
+      "id": "C2",
+      "reviewLines": [
+        244,
+        258
+      ],
+      "concern": "Callback ownership is consistent across phases and terminals",
+      "nodePatterns": [
+        "^RACE-CALLBACK-",
+        "^RACE-CONTRACT-callback-"
+      ],
+      "browserIds": [
+        "B-023",
+        "B-032"
+      ],
+      "compilers": [],
+      "limits": "60sibling-error combinations plus sync/async and abortedcallback controls; callback code must itself settle."
+    },
+    {
+      "id": "C3",
+      "reviewLines": [
+        259,
+        277
+      ],
+      "concern": "Clear prevents older eligible operations from refilling cache",
+      "nodePatterns": [
+        "^RACE-CLEAR-request hook:",
+        "^RACE-CLEAR-network:",
+        "^RACE-CLEAR-retry:",
+        "^RACE-CLEAR-contract input:",
+        "^RACE-CLEAR-output parser:",
+        "^RACE-CLEAR-body-copy:"
+      ],
+      "browserIds": [
+        "B-016"
+      ],
+      "compilers": [],
+      "limits": "Auth-policy operations are cache-ineligible and are only privacy/progress controls, not generation proof."
+    },
+    {
+      "id": "C4",
+      "reviewLines": [
+        278,
+        291
+      ],
+      "concern": "Supported public snapshots and advanced live handles",
+      "nodePatterns": [
+        "^shared policy handles support",
+        "^RACE-HANDLES-admission:",
+        "^RACE-CLEAR-body-copy:"
+      ],
+      "browserIds": [],
+      "compilers": [
+        "5.0.4",
+        "5.9.3",
+        "7.0.2"
+      ],
+      "limits": "Caller releases each directly acquired concurrency slot exactly once; misuse is outside promise."
+    },
+    {
+      "id": "C5",
+      "reviewLines": [
+        292,
+        305
+      ],
+      "concern": "Timeout/concurrency end at headers and body ownership remains native",
+      "nodePatterns": [
+        "^slow body does not occupy concurrency",
+        "^send leaves network bodies",
+        "^RACE-ABORT-native-body:"
+      ],
+      "browserIds": [
+        "B-012",
+        "B-017",
+        "B-018",
+        "B-019"
+      ],
+      "compilers": [],
+      "limits": "No global operation/memory bound; caller-owned raw/error bodies need consume/cancel; callbacks must settle."
+    },
+    {
+      "id": "P-CORS",
+      "reviewLines": [
+        312,
+        325
+      ],
+      "concern": "CORS-hidden Vary cannot defeat cache privacy",
+      "nodePatterns": [
+        "^cache bypasses response"
+      ],
+      "browserIds": [
+        "B-013",
+        "B-026",
+        "B-027",
+        "B-028"
+      ],
+      "compilers": [],
+      "limits": "Finite examples; not every interleaving."
+    },
+    {
+      "id": "P-EMPTY",
+      "reviewLines": [
+        312,
+        325
+      ],
+      "concern": "Absent and empty headers differ; cURL literal at-sign stays inline",
+      "nodePatterns": [
+        "^cache keys distinguish missing/empty",
+        "^ADV-CURL-leading-at-"
+      ],
+      "browserIds": [
+        "B-029"
+      ],
+      "compilers": [],
+      "limits": "Finite examples; not every interleaving."
+    },
+    {
+      "id": "P-SNAPSHOT",
+      "reviewLines": [
+        312,
+        325
+      ],
+      "concern": "Mutable inspection values cannot rewrite other executions",
+      "nodePatterns": [
+        "^JSON attachment deeply snapshots",
+        "^ArrayBuffer, URLSearchParams",
+        "^ADV-BODY-"
+      ],
+      "browserIds": [
+        "B-003"
+      ],
+      "compilers": [],
+      "limits": "Finite examples; not every interleaving."
+    },
+    {
+      "id": "P-DISPOSAL",
+      "reviewLines": [
+        312,
+        325
+      ],
+      "concern": "Abandoned retry/hook-failed endless bodies close",
+      "nodePatterns": [
+        "^retry cancels a never-ending",
+        "^response-hook rejection cancels",
+        "^discarded retry response cancels",
+        "^response hook failure cancels unfinished"
+      ],
+      "browserIds": [],
+      "compilers": [],
+      "limits": "Server close observations and available policy capacity; no general leak claim."
+    },
+    {
+      "id": "P-ADMISSION",
+      "reviewLines": [
+        312,
+        325
+      ],
+      "concern": "Rate follows hooks/concurrency and cancelled queues release ownership",
+      "nodePatterns": [
+        "^hooks complete before policy",
+        "^queued concurrency work cannot reserve",
+        "^concurrency FIFO",
+        "^rate FIFO"
+      ],
+      "browserIds": [],
+      "compilers": [],
+      "limits": "Bounded queues and observable diagnostics; no throughput/latency target."
+    },
+    {
+      "id": "P-BOUNDS",
+      "reviewLines": [
+        312,
+        325
+      ],
+      "concern": "Finite cache entry/body budgets and expiry",
+      "nodePatterns": [
+        "^cache bounds entries/bytes",
+        "^aggregate byte budget",
+        "^maxBytes requires valid Content-Length"
+      ],
+      "browserIds": [],
+      "compilers": [],
+      "limits": "Finite examples; not every interleaving."
+    },
+    {
+      "id": "P-AUTH",
+      "reviewLines": [
+        312,
+        325
+      ],
+      "concern": "Public auth state and query overrides stay redacted",
+      "nodePatterns": [
+        "^bearer/basic/header/query auth",
+        "^query API credential remains redacted"
+      ],
+      "browserIds": [
+        "B-007",
+        "B-015"
+      ],
+      "compilers": [],
+      "limits": "Finite examples; not every interleaving."
+    },
+    {
+      "id": "APP",
+      "reviewLines": [
+        388,
+        398
+      ],
+      "concern": "Actual consumer refresh/upload/stream/mutation interactions",
+      "nodePatterns": [
+        "^request auth overrides client auth",
+        "^multipart fluent",
+        "^RACE-STRESS-mixed seed="
+      ],
+      "browserIds": [
+        "B-006",
+        "B-004",
+        "B-016",
+        "B-019",
+        "B-025"
+      ],
+      "compilers": [],
+      "limits": "192 operations per stress seed reuse shared cache keys with authoritative post-mutation barriers; synthetic local application only."
+    },
+    {
+      "id": "QF-001",
+      "reviewLines": [
+        172,
+        206
+      ],
+      "concern": "Inherited Object path names work at supported compiler floor",
+      "nodePatterns": [],
+      "browserIds": [],
+      "compilers": [
+        "5.0.4",
+        "5.9.3",
+        "7.0.2"
+      ],
+      "limits": "Resolved only on draftPRcandidate; merged baseline still fails. Includes7 previously failing names, exact extra/symbol-key rejection."
+    }
+  ],
+  "nonGateReviewSections": {
+    "306-338": "Maintainability observations and nonblocking cleanup recommendations: covered by product type/lint/architecture/review; source size and module layout are not public API promises.",
+    "339-374": "Historical reviewer validation results: retained as history, replaced by exact candidate manifests and current CI; current unit and package gates remain required.",
+    "375-398": "Combination testing and release acceptance: represented by seeded native comparisons, actual app flows and README acceptance gates."
+  }
+}

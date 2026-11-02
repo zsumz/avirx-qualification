@@ -1,3 +1,5 @@
 # Recorded execution
 
 Compact source/candidate and measured result snapshots are stored here after final execution. Complete local logs remain under ignored `artifacts/`; CI uploads each lane's logs/manifests separately for 14 days. A snapshot is historical evidence for its recorded candidate and suite commit, not a substitute for rerunning the release gate.
+
+The original snapshots retain the merged baseline and its failingTypeScript floor result. `current-local.json` records sanitized candidate-matched local evidence for the unmerged fix. LocalFirefox remains not-run when blocked by the native launch environment; the public CI matrix is authoritative for all three engines. Final measured review coverage is uploaded as the `review-coverage`CI artifact, including a human-readable matrix. Historical superseded private CI runs were removed before publication after local path sanitization; the sanitized baseline run remains at [41366762304](https://github.com/zsumz/avirx-qualification/actions/runs/41366762304).

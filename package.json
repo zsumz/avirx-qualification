@@ -17,7 +17,9 @@
     "test:browsers": "node test/browser.mjs --all",
     "qualify": "node scripts/run.mjs full",
     "report": "node scripts/report.mjs",
-    "test:runtime": "node scripts/run.mjs runtime"
+    "test:runtime": "node scripts/run.mjs runtime",
+    "coverage:review": "node scripts/coverage-review.mjs",
+    "results:record": "node scripts/record-results.mjs"
   },
   "devDependencies": {
     "playwright": "1.62.1",

@@ -1,8 +1,11 @@
 {
   "repository": "https://github.com/zsumz/avirx.git",
-  "commit": "1992ffba1b9fca800196b6fd8a0912cc8a9ddf16",
+  "commit": "5b1df16e1c55ce9940b20f319529bea1291760fe",
   "reviewedCommit": "ad4590c99cc625eb9d80d63172968dd420b44aa7",
   "expectedPackage": "avirx",
   "expectedVersion": "0.1.0",
-  "note": "Merged stabilization source. Version 0.1.0 here identifies this commit's package metadata; never substitute the registry's older 0.1.0."
+  "note": "Draft PR candidate; fixes are not merged. Preserve merged baseline provenance in docs/results. Version 0.1.0 is source metadata, never substitute registry0.1.0.",
+  "baselineCommit": "1992ffba1b9fca800196b6fd8a0912cc8a9ddf16",
+  "candidateBranch": "fix/ts50-reserved-path-keys",
+  "candidatePullRequest": "https://github.com/zsumz/avirx/pull/2"
 }

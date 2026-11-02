@@ -24,6 +24,25 @@ const read = api.get('/books/{id}').path({ id: 'café' }).query({ include: ['aut
 const reserved = api.get('/{constructor}/{__proto__}/{用户.id}').path({
     constructor: 'a', ['__proto__']: 'b', '用户.id': 'c',
 });
+// TS-RESERVED: inherited Object names are valid own path keys at the compiler floor.
+api.get('/{toString}').path({ toString: 'value' });
+api.get('/{valueOf}').path({ valueOf: 'value' });
+api.get('/{hasOwnProperty}').path({ hasOwnProperty: 'value' });
+api.get('/{isPrototypeOf}').path({ isPrototypeOf: 'value' });
+api.get('/{propertyIsEnumerable}').path({ propertyIsEnumerable: 'value' });
+api.get('/{toLocaleString}').path({ toLocaleString: 'value' });
+api.get('/{constructor}').path({ constructor: 'value' });
+api.get('/{__proto__}').path({ ['__proto__']: 'value' });
+const inheritedKeys = { constructor: 'one', toString: 'two', valueOf: 'three' };
+api.get('/{constructor}/{toString}/{valueOf}').path(inheritedKeys);
+// @ts-expect-error TS-EXACT-RESERVED: inherited names do not permit an extra own key.
+api.get('/{constructor}').path({ constructor: 'value', extra: 'value' });
+const reservedExtra = { toString: 'value', extra: 'value' };
+// @ts-expect-error TS-EXACT-RESERVED-VARIABLE: extra keys on a variable also reject.
+api.get('/{toString}').path(reservedExtra);
+const pathSymbol = Symbol('path');
+// @ts-expect-error TS-EXACT-SYMBOL: a symbol does not silently evade exact path keys.
+api.get('/{constructor}').path({ constructor: 'value', [pathSymbol]: 'extra' });
 // @ts-expect-error Missing exact path key.
 api.get('/{id}/{edition}').path({ id: 'a' });
 // @ts-expect-error Extra exact path key from a literal.

@@ -1,3 +1,4 @@
+import { suiteEvidence, packageContent } from './evidence.mjs';
 // Runs under the declared Node 18.17 floor, independently of the suite runner.
 import assert from 'node:assert/strict';
 import http from 'node:http';
@@ -6,6 +7,7 @@ import { avirx, endpoint, AvirxError, isAvirxError, parseWithSchema } from 'avir
 import { assertCandidate } from './provenance.mjs';
 
 const candidate = assertCandidate();
+const suite = suiteEvidence();
 const cases = [];
 const sockets = new Set();
 const server = http.createServer(async (request, response) => {
@@ -121,7 +123,7 @@ finally {
     await mkdir(new URL('../artifacts/', import.meta.url), { recursive: true });
     await writeFile(new URL(`../artifacts/node-compat-${process.versions.node}.json`, import.meta.url), `${JSON.stringify({
         generatedAt: new Date().toISOString(), node: process.version, platform: process.platform,
-        candidateCommit: candidate.candidateCommit, integrity: candidate.package.integrity,
+        suite, packageContentSha256: packageContent(candidate), candidateCommit: candidate.candidateCommit, integrity: candidate.package.integrity,
         nativeAbortSignalAny: typeof AbortSignal.any === 'function', status: failure ? 'failed' : 'passed',
         cases, failure: failure ? failure.stack ?? String(failure) : undefined,
         boundary: 'Basic installed-package compatibility; policies requiring native AbortSignal.any are exercised in full lanes.',

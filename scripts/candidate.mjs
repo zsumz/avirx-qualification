@@ -42,7 +42,7 @@ const digest = path => createHash('sha256').update(readFileSync(path)).digest('h
 if (digest(join(source, 'dist/index.js')) !== digest(join(root, 'node_modules/avirx/dist/index.js'))) throw Error('Installed entry differs from built source.');
 const manifest = {
   schemaVersion: 1, generatedAt: new Date().toISOString(), repository: pinned.repository,
-  baselineCommit: pinned.commit, candidateCommit: actual, override: actual !== pinned.commit,
+  baselineCommit: pinned.baselineCommit ?? pinned.commit, pinnedCommit: pinned.commit, candidateBranch: pinned.candidateBranch, candidatePullRequest: pinned.candidatePullRequest, candidateCommit: actual, override: actual !== pinned.commit,
   sourceTree: run('git', ['rev-parse', 'HEAD^{tree}'], source, true).trim(),
   package: { name: pkg.name, version: pkg.version, filename: pack.filename, integrity, sha256: createHash('sha256').update(bytes).digest('hex'), unpackedSize: pack.unpackedSize, files: pack.files.map(f => f.path), entrySha256: digest(join(root, 'node_modules/avirx/dist/index.js')), runtimeDependencies: installed.dependencies ?? {}, fileSha256: Object.fromEntries(pack.files.map(f => [f.path, digest(join(root, 'node_modules/avirx', f.path))])) },
   toolchain: { node: process.version, npm: run('npm', ['--version'], root, true).trim(), platform: process.platform, arch: process.arch },

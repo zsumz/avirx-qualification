@@ -150,3 +150,34 @@ jobs:
           name: seed-repeatability
           path: artifacts/
           retention-days: 14
+  review-coverage:
+    name: Review-to-test evidence
+    if: always()
+    needs: [runtime, types, minimum, browser, soak]
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+      - uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Prepare exact candidate
+        env:
+          CANDIDATE_COMMIT: ${{ inputs.candidate_commit }}
+        run: |
+          if [ -n "$CANDIDATE_COMMIT" ]; then npm run candidate -- --commit "$CANDIDATE_COMMIT"; else npm run candidate; fi
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          path: artifacts/evidence
+      - run: npm run coverage:review -- --evidence artifacts/evidence
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: review-coverage
+          path: |
+            artifacts/candidate.json
+            artifacts/review-coverage.json
+            artifacts/review-matrix.md
+          retention-days: 14

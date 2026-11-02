@@ -1,9 +1,11 @@
+import { suiteEvidence, packageContent } from './evidence.mjs';
 import { spawnSync } from 'node:child_process';
 import { readFile, mkdir, writeFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { assertCandidate } from './provenance.mjs';
 
 const candidate = assertCandidate();
+const suite = suiteEvidence();
 const root = fileURLToPath(new URL('..', import.meta.url));
 const source = await readFile(new URL('../types/consumer.ts', import.meta.url), 'utf8');
 const negativeCases = (source.match(/@ts-expect-error/g) ?? []).length;
@@ -27,6 +29,6 @@ for (const dependency of ['typescript-minimum', 'typescript', 'typescript-curren
 await mkdir(new URL('../artifacts/', import.meta.url), { recursive: true });
 await writeFile(new URL('../artifacts/types.json', import.meta.url), `${JSON.stringify({
     generatedAt: new Date().toISOString(), node: process.version,
-    candidateCommit: candidate.candidateCommit, integrity: candidate.package.integrity, results,
+    suite, packageContentSha256: packageContent(candidate), candidateCommit: candidate.candidateCommit, integrity: candidate.package.integrity, results,
 }, null, 2)}\n`);
 if (results.some(result => result.status !== 'passed')) process.exitCode = 1;

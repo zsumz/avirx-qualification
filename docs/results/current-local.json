@@ -1,0 +1,2562 @@
+{
+  "generatedAt": "2026-11-02T00:35:23.830Z",
+  "suite": {
+    "revision": "c1d5e19cf2ccd4a17a74601f17bff25c755b3255",
+    "dirty": true,
+    "inputSha256": "378e9f9d282c5d5b6eba45805f70c301604dd5f4baea079fc921ba4764153116"
+  },
+  "packageContentSha256": "238259a9ddc4315479161cc7d24ebabfff6cbe5236a037f980753494ccb39423",
+  "candidateCommit": "5b1df16e1c55ce9940b20f319529bea1291760fe",
+  "baselineCommit": "1992ffba1b9fca800196b6fd8a0912cc8a9ddf16",
+  "candidatePullRequest": "https://github.com/zsumz/avirx/pull/2",
+  "packageIntegrity": "sha512-LyFAxIGnVKboMBppK/3kBWHofjjLCu96qCxYTrL6uFfM8E6p3ss/9lcxl4I71j0HKcoZuedpBzWSN/A9hskyBw==",
+  "toolchain": {
+    "node": "v24.19.0",
+    "npm": "11.17.0",
+    "platform": "darwin",
+    "arch": "arm64"
+  },
+  "reports": {
+    "run-fast.json": {
+      "generatedAt": "2026-11-02T00:34:06.700Z",
+      "mode": "fast",
+      "suite": {
+        "revision": "c1d5e19cf2ccd4a17a74601f17bff25c755b3255",
+        "dirty": true,
+        "inputSha256": "378e9f9d282c5d5b6eba45805f70c301604dd5f4baea079fc921ba4764153116"
+      },
+      "packageContentSha256": "238259a9ddc4315479161cc7d24ebabfff6cbe5236a037f980753494ccb39423",
+      "candidateCommit": "5b1df16e1c55ce9940b20f319529bea1291760fe",
+      "packageIntegrity": "sha512-LyFAxIGnVKboMBppK/3kBWHofjjLCu96qCxYTrL6uFfM8E6p3ss/9lcxl4I71j0HKcoZuedpBzWSN/A9hskyBw==",
+      "toolchain": {
+        "node": "v24.19.0",
+        "platform": "darwin",
+        "arch": "arm64"
+      },
+      "results": [
+        {
+          "name": "node",
+          "command": [
+            "node",
+            "--test",
+            "--test-concurrency=1",
+            "--test-reporter=tap",
+            "test/adversarial.test.mjs",
+            "test/contract-keys.test.mjs",
+            "test/http.test.mjs",
+            "test/policies.test.mjs",
+            "test/races.test.mjs"
+          ],
+          "status": "passed",
+          "code": 0,
+          "signal": null,
+          "durationMs": 6790,
+          "tests": 658,
+          "pass": 658,
+          "fail": 0,
+          "cancelled": 0,
+          "skipped": 0
+        },
+        {
+          "name": "types",
+          "command": [
+            "node",
+            "scripts/types.mjs"
+          ],
+          "status": "passed",
+          "code": 0,
+          "signal": null,
+          "durationMs": 1364
+        },
+        {
+          "name": "compat",
+          "command": [
+            "node",
+            "scripts/node-compat.mjs"
+          ],
+          "status": "passed",
+          "code": 0,
+          "signal": null,
+          "durationMs": 128
+        }
+      ]
+    },
+    "run-soak.json": {
+      "generatedAt": "2026-11-02T00:34:40.508Z",
+      "mode": "soak",
+      "suite": {
+        "revision": "c1d5e19cf2ccd4a17a74601f17bff25c755b3255",
+        "dirty": true,
+        "inputSha256": "378e9f9d282c5d5b6eba45805f70c301604dd5f4baea079fc921ba4764153116"
+      },
+      "packageContentSha256": "238259a9ddc4315479161cc7d24ebabfff6cbe5236a037f980753494ccb39423",
+      "candidateCommit": "5b1df16e1c55ce9940b20f319529bea1291760fe",
+      "packageIntegrity": "sha512-LyFAxIGnVKboMBppK/3kBWHofjjLCu96qCxYTrL6uFfM8E6p3ss/9lcxl4I71j0HKcoZuedpBzWSN/A9hskyBw==",
+      "toolchain": {
+        "node": "v24.19.0",
+        "platform": "darwin",
+        "arch": "arm64"
+      },
+      "results": [
+        {
+          "name": "soak-1",
+          "command": [
+            "node",
+            "--test",
+            "--test-concurrency=1",
+            "--test-reporter=tap",
+            "test/adversarial.test.mjs",
+            "test/contract-keys.test.mjs",
+            "test/http.test.mjs",
+            "test/policies.test.mjs",
+            "test/races.test.mjs"
+          ],
+          "status": "passed",
+          "code": 0,
+          "signal": null,
+          "durationMs": 6667,
+          "tests": 658,
+          "pass": 658,
+          "fail": 0,
+          "cancelled": 0,
+          "skipped": 0
+        },
+        {
+          "name": "soak-3735928559",
+          "command": [
+            "node",
+            "--test",
+            "--test-concurrency=1",
+            "--test-reporter=tap",
+            "test/adversarial.test.mjs",
+            "test/contract-keys.test.mjs",
+            "test/http.test.mjs",
+            "test/policies.test.mjs",
+            "test/races.test.mjs"
+          ],
+          "status": "passed",
+          "code": 0,
+          "signal": null,
+          "durationMs": 6742,
+          "tests": 658,
+          "pass": 658,
+          "fail": 0,
+          "cancelled": 0,
+          "skipped": 0
+        },
+        {
+          "name": "soak-1592594996",
+          "command": [
+            "node",
+            "--test",
+            "--test-concurrency=1",
+            "--test-reporter=tap",
+            "test/adversarial.test.mjs",
+            "test/contract-keys.test.mjs",
+            "test/http.test.mjs",
+            "test/policies.test.mjs",
+            "test/races.test.mjs"
+          ],
+          "status": "passed",
+          "code": 0,
+          "signal": null,
+          "durationMs": 6564,
+          "tests": 658,
+          "pass": 658,
+          "fail": 0,
+          "cancelled": 0,
+          "skipped": 0
+        },
+        {
+          "name": "soak-4294967295",
+          "command": [
+            "node",
+            "--test",
+            "--test-concurrency=1",
+            "--test-reporter=tap",
+            "test/adversarial.test.mjs",
+            "test/contract-keys.test.mjs",
+            "test/http.test.mjs",
+            "test/policies.test.mjs",
+            "test/races.test.mjs"
+          ],
+          "status": "passed",
+          "code": 0,
+          "signal": null,
+          "durationMs": 6927,
+          "tests": 658,
+          "pass": 658,
+          "fail": 0,
+          "cancelled": 0,
+          "skipped": 0
+        },
+        {
+          "name": "soak-20261102",
+          "command": [
+            "node",
+            "--test",
+            "--test-concurrency=1",
+            "--test-reporter=tap",
+            "test/adversarial.test.mjs",
+            "test/contract-keys.test.mjs",
+            "test/http.test.mjs",
+            "test/policies.test.mjs",
+            "test/races.test.mjs"
+          ],
+          "status": "passed",
+          "code": 0,
+          "signal": null,
+          "durationMs": 6756,
+          "tests": 658,
+          "pass": 658,
+          "fail": 0,
+          "cancelled": 0,
+          "skipped": 0
+        }
+      ]
+    },
+    "types.json": {
+      "generatedAt": "2026-11-02T00:34:06.563Z",
+      "node": "v24.19.0",
+      "suite": {
+        "revision": "c1d5e19cf2ccd4a17a74601f17bff25c755b3255",
+        "dirty": true,
+        "inputSha256": "378e9f9d282c5d5b6eba45805f70c301604dd5f4baea079fc921ba4764153116"
+      },
+      "packageContentSha256": "238259a9ddc4315479161cc7d24ebabfff6cbe5236a037f980753494ccb39423",
+      "candidateCommit": "5b1df16e1c55ce9940b20f319529bea1291760fe",
+      "integrity": "sha512-LyFAxIGnVKboMBppK/3kBWHofjjLCu96qCxYTrL6uFfM8E6p3ss/9lcxl4I71j0HKcoZuedpBzWSN/A9hskyBw==",
+      "results": [
+        {
+          "dependency": "typescript-minimum",
+          "version": "5.0.4",
+          "negativeCases": 25,
+          "status": "passed",
+          "exitCode": 0,
+          "diagnostics": ""
+        },
+        {
+          "dependency": "typescript",
+          "version": "5.9.3",
+          "negativeCases": 25,
+          "status": "passed",
+          "exitCode": 0,
+          "diagnostics": ""
+        },
+        {
+          "dependency": "typescript-current",
+          "version": "7.0.2",
+          "negativeCases": 25,
+          "status": "passed",
+          "exitCode": 0,
+          "diagnostics": ""
+        }
+      ]
+    },
+    "browser-chromium.json": {
+      "engine": "chromium",
+      "status": "passed",
+      "node": "v24.19.0",
+      "browserVersion": "151.0.7922.34",
+      "playwrightVersion": "1.62.1",
+      "suite": {
+        "revision": "c1d5e19cf2ccd4a17a74601f17bff25c755b3255",
+        "dirty": true,
+        "inputSha256": "378e9f9d282c5d5b6eba45805f70c301604dd5f4baea079fc921ba4764153116"
+      },
+      "packageContentSha256": "238259a9ddc4315479161cc7d24ebabfff6cbe5236a037f980753494ccb39423",
+      "candidateCommit": "5b1df16e1c55ce9940b20f319529bea1291760fe",
+      "packageIntegrity": "sha512-LyFAxIGnVKboMBppK/3kBWHofjjLCu96qCxYTrL6uFfM8E6p3ss/9lcxl4I71j0HKcoZuedpBzWSN/A9hskyBw==",
+      "platform": "darwin",
+      "plannedChecks": 37,
+      "plannedCheckIds": [
+        "B-001",
+        "B-002",
+        "B-003",
+        "B-004",
+        "B-005",
+        "B-006",
+        "B-007",
+        "B-008",
+        "B-009",
+        "B-010",
+        "B-011",
+        "B-012",
+        "B-013",
+        "B-014",
+        "B-015",
+        "B-016",
+        "B-017",
+        "B-018",
+        "B-019",
+        "B-020",
+        "B-021",
+        "B-022",
+        "B-023",
+        "B-024",
+        "B-025",
+        "B-026",
+        "B-027",
+        "B-028",
+        "B-029",
+        "B-030",
+        "B-031",
+        "B-032",
+        "B-033",
+        "B-034",
+        "B-035",
+        "B-036",
+        "B-037"
+      ],
+      "checks": [
+        {
+          "id": "B-001",
+          "name": "installed ESM root exports and native required APIs",
+          "status": "passed",
+          "durationMs": 4,
+          "assertions": 4
+        },
+        {
+          "id": "B-002",
+          "name": "encoded path and repeated unicode query reach actual HTTP",
+          "status": "passed",
+          "durationMs": 17,
+          "assertions": 3
+        },
+        {
+          "id": "B-003",
+          "name": "builder and mutable inspection copies stay independent",
+          "status": "passed",
+          "durationMs": 5,
+          "assertions": 3
+        },
+        {
+          "id": "B-004",
+          "name": "JSON replacement permits native multipart boundary and file bytes",
+          "status": "passed",
+          "durationMs": 6,
+          "assertions": 6
+        },
+        {
+          "id": "B-005",
+          "name": "explicit custom MIME remains caller owned through body replacement",
+          "status": "passed",
+          "durationMs": 2,
+          "assertions": 2
+        },
+        {
+          "id": "B-006",
+          "name": "retry resolves refreshed auth each attempt and hook order",
+          "status": "passed",
+          "durationMs": 16,
+          "assertions": 3
+        },
+        {
+          "id": "B-007",
+          "name": "preview cURL and public state redact managed custom credentials",
+          "status": "passed",
+          "durationMs": 1,
+          "assertions": 3
+        },
+        {
+          "id": "B-008",
+          "name": "protected redirect never reaches second origin",
+          "status": "passed",
+          "durationMs": 3,
+          "assertions": 3
+        },
+        {
+          "id": "B-009",
+          "name": "explicit trusted redirect transmits fixture credential to second origin",
+          "status": "passed",
+          "durationMs": 3,
+          "assertions": 1
+        },
+        {
+          "id": "B-010",
+          "name": "native bearer redirect strips authorization across origins",
+          "status": "passed",
+          "durationMs": 2,
+          "assertions": 1
+        },
+        {
+          "id": "B-011",
+          "name": "same-origin public cache hit bypasses hooks and returns independent bytes",
+          "status": "passed",
+          "durationMs": 5,
+          "assertions": 4
+        },
+        {
+          "id": "B-012",
+          "name": "raw send never creates a new cache entry",
+          "status": "passed",
+          "durationMs": 2,
+          "assertions": 2
+        },
+        {
+          "id": "B-013",
+          "name": "CORS public responses bypass cache despite exposed Vary",
+          "status": "passed",
+          "durationMs": 2,
+          "assertions": 2
+        },
+        {
+          "id": "B-014",
+          "name": "browser cookie sessions and private responses never cache",
+          "status": "passed",
+          "durationMs": 4,
+          "assertions": 3
+        },
+        {
+          "id": "B-015",
+          "name": "auth policy prevents public-response caching",
+          "status": "passed",
+          "durationMs": 2,
+          "assertions": 2
+        },
+        {
+          "id": "B-016",
+          "name": "application mutation and explicit cache invalidation expose new version",
+          "status": "passed",
+          "durationMs": 5,
+          "assertions": 3
+        },
+        {
+          "id": "B-017",
+          "name": "fetch timeout classifies delayed response headers",
+          "status": "passed",
+          "durationMs": 13,
+          "assertions": 2
+        },
+        {
+          "id": "B-018",
+          "name": "fetch timeout ends at headers while slow body completes",
+          "status": "passed",
+          "durationMs": 1505,
+          "assertions": 1
+        },
+        {
+          "id": "B-019",
+          "name": "request signal cancellation remains attached to native streaming body",
+          "status": "passed",
+          "durationMs": 3,
+          "assertions": 2
+        },
+        {
+          "id": "B-020",
+          "name": "client signal cancellation classifies buffered body on current request",
+          "status": "passed",
+          "durationMs": 3,
+          "assertions": 4
+        },
+        {
+          "id": "B-021",
+          "name": "HEAD JSON and async schema transformation follow contract",
+          "status": "passed",
+          "durationMs": 2,
+          "assertions": 3
+        },
+        {
+          "id": "B-022",
+          "name": "HTTP decode and schema errors retain stable kinds",
+          "status": "passed",
+          "durationMs": 3,
+          "assertions": 7
+        },
+        {
+          "id": "B-023",
+          "name": "user callback failures reject original value from result terminal",
+          "status": "passed",
+          "durationMs": 1,
+          "assertions": 2
+        },
+        {
+          "id": "B-024",
+          "name": "download retains native bytes and available metadata",
+          "status": "passed",
+          "durationMs": 3,
+          "assertions": 5
+        },
+        {
+          "id": "B-025",
+          "name": "contract async input/output parsers execute through installed package",
+          "status": "passed",
+          "durationMs": 2,
+          "assertions": 1
+        },
+        {
+          "id": "B-026",
+          "name": "CORS-hidden Vary never reuses language-specific public bytes",
+          "status": "passed",
+          "durationMs": 4,
+          "assertions": 7
+        },
+        {
+          "id": "B-027",
+          "name": "same-origin configured Vary retains separate language entries",
+          "status": "passed",
+          "durationMs": 3,
+          "assertions": 5
+        },
+        {
+          "id": "B-028",
+          "name": "same-origin unconfigured Vary bypasses cache instead of conflating languages",
+          "status": "passed",
+          "durationMs": 4,
+          "assertions": 5
+        },
+        {
+          "id": "B-029",
+          "name": "native absent and explicitly empty Vary header fields stay distinct",
+          "status": "passed",
+          "durationMs": 6,
+          "assertions": 12
+        },
+        {
+          "id": "B-030",
+          "name": "managed and known direct credentials reject mixed 302/307 chains before the next hop",
+          "status": "passed",
+          "durationMs": 4,
+          "assertions": 20
+        },
+        {
+          "id": "B-031",
+          "name": "explicit trust follows complete 302/307 chains with native POST rewrite and fixture credentials",
+          "status": "passed",
+          "durationMs": 4,
+          "assertions": 12
+        },
+        {
+          "id": "B-032",
+          "name": "sibling AvirxError callback failures retain identity across phases and every terminal",
+          "status": "passed",
+          "durationMs": 11,
+          "assertions": 63,
+          "cases": 30
+        },
+        {
+          "id": "B-033",
+          "name": "abort during async auth preflight preserves sibling cause and current request without sibling status",
+          "status": "passed",
+          "durationMs": 1,
+          "assertions": 7
+        },
+        {
+          "id": "B-034",
+          "name": "native active-fetch sibling abort retains victim identity after server-confirmed dispatch",
+          "status": "passed",
+          "durationMs": 2,
+          "assertions": 8
+        },
+        {
+          "id": "B-035",
+          "name": "buffered body sibling abort keeps current response status and original sibling cause",
+          "status": "passed",
+          "durationMs": 3,
+          "assertions": 8
+        },
+        {
+          "id": "B-036",
+          "name": "native Request serialization preserves final body and explicit versus inferred MIME transitions",
+          "status": "passed",
+          "durationMs": 17,
+          "assertions": 81,
+          "cases": 21
+        },
+        {
+          "id": "B-037",
+          "name": "safe unusual placeholders preserve encoded bytes while unsafe grammar and dot segments reject",
+          "status": "passed",
+          "durationMs": 8,
+          "assertions": 37,
+          "cases": 37
+        }
+      ],
+      "assertions": 337,
+      "startedAt": "2026-11-02T00:33:59.000Z",
+      "cleanupErrors": [],
+      "notRunChecks": 0,
+      "notRunCheckIds": [],
+      "finishedAt": "2026-11-02T00:34:01.190Z"
+    },
+    "browser-firefox.json": {
+      "status": "not-run",
+      "reason": "Existing report belongs to another candidate, package content, or suite input."
+    },
+    "browser-webkit.json": {
+      "engine": "webkit",
+      "status": "passed",
+      "node": "v24.19.0",
+      "browserVersion": "26.5",
+      "playwrightVersion": "1.62.1",
+      "suite": {
+        "revision": "c1d5e19cf2ccd4a17a74601f17bff25c755b3255",
+        "dirty": true,
+        "inputSha256": "378e9f9d282c5d5b6eba45805f70c301604dd5f4baea079fc921ba4764153116"
+      },
+      "packageContentSha256": "238259a9ddc4315479161cc7d24ebabfff6cbe5236a037f980753494ccb39423",
+      "candidateCommit": "5b1df16e1c55ce9940b20f319529bea1291760fe",
+      "packageIntegrity": "sha512-LyFAxIGnVKboMBppK/3kBWHofjjLCu96qCxYTrL6uFfM8E6p3ss/9lcxl4I71j0HKcoZuedpBzWSN/A9hskyBw==",
+      "platform": "darwin",
+      "plannedChecks": 37,
+      "plannedCheckIds": [
+        "B-001",
+        "B-002",
+        "B-003",
+        "B-004",
+        "B-005",
+        "B-006",
+        "B-007",
+        "B-008",
+        "B-009",
+        "B-010",
+        "B-011",
+        "B-012",
+        "B-013",
+        "B-014",
+        "B-015",
+        "B-016",
+        "B-017",
+        "B-018",
+        "B-019",
+        "B-020",
+        "B-021",
+        "B-022",
+        "B-023",
+        "B-024",
+        "B-025",
+        "B-026",
+        "B-027",
+        "B-028",
+        "B-029",
+        "B-030",
+        "B-031",
+        "B-032",
+        "B-033",
+        "B-034",
+        "B-035",
+        "B-036",
+        "B-037"
+      ],
+      "checks": [
+        {
+          "id": "B-001",
+          "name": "installed ESM root exports and native required APIs",
+          "status": "passed",
+          "durationMs": 2,
+          "assertions": 4
+        },
+        {
+          "id": "B-002",
+          "name": "encoded path and repeated unicode query reach actual HTTP",
+          "status": "passed",
+          "durationMs": 12,
+          "assertions": 3
+        },
+        {
+          "id": "B-003",
+          "name": "builder and mutable inspection copies stay independent",
+          "status": "passed",
+          "durationMs": 6,
+          "assertions": 3
+        },
+        {
+          "id": "B-004",
+          "name": "JSON replacement permits native multipart boundary and file bytes",
+          "status": "passed",
+          "durationMs": 4,
+          "assertions": 6
+        },
+        {
+          "id": "B-005",
+          "name": "explicit custom MIME remains caller owned through body replacement",
+          "status": "passed",
+          "durationMs": 4,
+          "assertions": 2
+        },
+        {
+          "id": "B-006",
+          "name": "retry resolves refreshed auth each attempt and hook order",
+          "status": "passed",
+          "durationMs": 17,
+          "assertions": 3
+        },
+        {
+          "id": "B-007",
+          "name": "preview cURL and public state redact managed custom credentials",
+          "status": "passed",
+          "durationMs": 1,
+          "assertions": 3
+        },
+        {
+          "id": "B-008",
+          "name": "protected redirect never reaches second origin",
+          "status": "passed",
+          "durationMs": 4,
+          "assertions": 3
+        },
+        {
+          "id": "B-009",
+          "name": "explicit trusted redirect transmits fixture credential to second origin",
+          "status": "passed",
+          "durationMs": 4,
+          "assertions": 1
+        },
+        {
+          "id": "B-010",
+          "name": "native bearer redirect strips authorization across origins",
+          "status": "passed",
+          "durationMs": 3,
+          "assertions": 1
+        },
+        {
+          "id": "B-011",
+          "name": "same-origin public cache hit bypasses hooks and returns independent bytes",
+          "status": "passed",
+          "durationMs": 6,
+          "assertions": 4
+        },
+        {
+          "id": "B-012",
+          "name": "raw send never creates a new cache entry",
+          "status": "passed",
+          "durationMs": 4,
+          "assertions": 2
+        },
+        {
+          "id": "B-013",
+          "name": "CORS public responses bypass cache despite exposed Vary",
+          "status": "passed",
+          "durationMs": 3,
+          "assertions": 2
+        },
+        {
+          "id": "B-014",
+          "name": "browser cookie sessions and private responses never cache",
+          "status": "passed",
+          "durationMs": 3,
+          "assertions": 3
+        },
+        {
+          "id": "B-015",
+          "name": "auth policy prevents public-response caching",
+          "status": "passed",
+          "durationMs": 5,
+          "assertions": 2
+        },
+        {
+          "id": "B-016",
+          "name": "application mutation and explicit cache invalidation expose new version",
+          "status": "passed",
+          "durationMs": 4,
+          "assertions": 3
+        },
+        {
+          "id": "B-017",
+          "name": "fetch timeout classifies delayed response headers",
+          "status": "passed",
+          "durationMs": 13,
+          "assertions": 2
+        },
+        {
+          "id": "B-018",
+          "name": "fetch timeout ends at headers while slow body completes",
+          "status": "passed",
+          "durationMs": 1504,
+          "assertions": 1
+        },
+        {
+          "id": "B-019",
+          "name": "request signal cancellation remains attached to native streaming body",
+          "status": "passed",
+          "durationMs": 3,
+          "assertions": 2
+        },
+        {
+          "id": "B-020",
+          "name": "client signal cancellation classifies buffered body on current request",
+          "status": "passed",
+          "durationMs": 3,
+          "assertions": 4
+        },
+        {
+          "id": "B-021",
+          "name": "HEAD JSON and async schema transformation follow contract",
+          "status": "passed",
+          "durationMs": 4,
+          "assertions": 3
+        },
+        {
+          "id": "B-022",
+          "name": "HTTP decode and schema errors retain stable kinds",
+          "status": "passed",
+          "durationMs": 5,
+          "assertions": 7
+        },
+        {
+          "id": "B-023",
+          "name": "user callback failures reject original value from result terminal",
+          "status": "passed",
+          "durationMs": 1,
+          "assertions": 2
+        },
+        {
+          "id": "B-024",
+          "name": "download retains native bytes and available metadata",
+          "status": "passed",
+          "durationMs": 3,
+          "assertions": 5
+        },
+        {
+          "id": "B-025",
+          "name": "contract async input/output parsers execute through installed package",
+          "status": "passed",
+          "durationMs": 2,
+          "assertions": 1
+        },
+        {
+          "id": "B-026",
+          "name": "CORS-hidden Vary never reuses language-specific public bytes",
+          "status": "passed",
+          "durationMs": 6,
+          "assertions": 7
+        },
+        {
+          "id": "B-027",
+          "name": "same-origin configured Vary retains separate language entries",
+          "status": "passed",
+          "durationMs": 3,
+          "assertions": 5
+        },
+        {
+          "id": "B-028",
+          "name": "same-origin unconfigured Vary bypasses cache instead of conflating languages",
+          "status": "passed",
+          "durationMs": 4,
+          "assertions": 5
+        },
+        {
+          "id": "B-029",
+          "name": "native absent and explicitly empty Vary header fields stay distinct",
+          "status": "passed",
+          "durationMs": 3,
+          "assertions": 12
+        },
+        {
+          "id": "B-030",
+          "name": "managed and known direct credentials reject mixed 302/307 chains before the next hop",
+          "status": "passed",
+          "durationMs": 7,
+          "assertions": 20
+        },
+        {
+          "id": "B-031",
+          "name": "explicit trust follows complete 302/307 chains with native POST rewrite and fixture credentials",
+          "status": "passed",
+          "durationMs": 8,
+          "assertions": 12
+        },
+        {
+          "id": "B-032",
+          "name": "sibling AvirxError callback failures retain identity across phases and every terminal",
+          "status": "passed",
+          "durationMs": 23,
+          "assertions": 63,
+          "cases": 30
+        },
+        {
+          "id": "B-033",
+          "name": "abort during async auth preflight preserves sibling cause and current request without sibling status",
+          "status": "passed",
+          "durationMs": 2,
+          "assertions": 7
+        },
+        {
+          "id": "B-034",
+          "name": "native active-fetch sibling abort retains victim identity after server-confirmed dispatch",
+          "status": "passed",
+          "durationMs": 4,
+          "assertions": 8
+        },
+        {
+          "id": "B-035",
+          "name": "buffered body sibling abort keeps current response status and original sibling cause",
+          "status": "passed",
+          "durationMs": 5,
+          "assertions": 8
+        },
+        {
+          "id": "B-036",
+          "name": "native Request serialization preserves final body and explicit versus inferred MIME transitions",
+          "status": "passed",
+          "durationMs": 29,
+          "assertions": 81,
+          "cases": 21
+        },
+        {
+          "id": "B-037",
+          "name": "safe unusual placeholders preserve encoded bytes while unsafe grammar and dot segments reject",
+          "status": "passed",
+          "durationMs": 15,
+          "assertions": 37,
+          "cases": 37
+        }
+      ],
+      "assertions": 337,
+      "startedAt": "2026-11-02T00:34:01.400Z",
+      "cleanupErrors": [],
+      "notRunChecks": 0,
+      "notRunCheckIds": [],
+      "finishedAt": "2026-11-02T00:34:04.513Z"
+    },
+    "review-coverage.json": {
+      "generatedAt": "2026-11-02T00:35:23.765Z",
+      "suite": {
+        "revision": "c1d5e19cf2ccd4a17a74601f17bff25c755b3255",
+        "dirty": true,
+        "inputSha256": "378e9f9d282c5d5b6eba45805f70c301604dd5f4baea079fc921ba4764153116"
+      },
+      "packageContentSha256": "238259a9ddc4315479161cc7d24ebabfff6cbe5236a037f980753494ccb39423",
+      "candidateCommit": "5b1df16e1c55ce9940b20f319529bea1291760fe",
+      "baselineCommit": "1992ffba1b9fca800196b6fd8a0912cc8a9ddf16",
+      "packageIntegrity": "sha512-LyFAxIGnVKboMBppK/3kBWHofjjLCu96qCxYTrL6uFfM8E6p3ss/9lcxl4I71j0HKcoZuedpBzWSN/A9hskyBw==",
+      "rows": [
+        {
+          "id": "F1",
+          "reviewLines": [
+            13,
+            34
+          ],
+          "concern": "Protected custom credentials, full redirect chains and explicit trust",
+          "nodePatterns": [
+            "^ADV-REDIRECT-default-",
+            "^ADV-REDIRECT-trusted-",
+            "^ADV-REDIRECT-native-"
+          ],
+          "browserIds": [
+            "B-008",
+            "B-009",
+            "B-010",
+            "B-030",
+            "B-031"
+          ],
+          "compilers": [],
+          "limits": "301/302/303/307/308 and two-hop chains; native Fetch owns redirect rewriting/Authorization stripping.",
+          "status": "not-run",
+          "node": [
+            {
+              "pattern": "^ADV-REDIRECT-default-",
+              "cases": 20,
+              "status": "passed"
+            },
+            {
+              "pattern": "^ADV-REDIRECT-trusted-",
+              "cases": 20,
+              "status": "passed"
+            },
+            {
+              "pattern": "^ADV-REDIRECT-native-",
+              "cases": 20,
+              "status": "passed"
+            }
+          ],
+          "browser": [
+            {
+              "engine": "chromium",
+              "id": "B-008",
+              "status": "passed"
+            },
+            {
+              "engine": "firefox",
+              "id": "B-008",
+              "status": "not-run"
+            },
+            {
+              "engine": "webkit",
+              "id": "B-008",
+              "status": "passed"
+            },
+            {
+              "engine": "chromium",
+              "id": "B-009",
+              "status": "passed"
+            },
+            {
+              "engine": "firefox",
+              "id": "B-009",
+              "status": "not-run"
+            },
+            {
+              "engine": "webkit",
+              "id": "B-009",
+              "status": "passed"
+            },
+            {
+              "engine": "chromium",
+              "id": "B-010",
+              "status": "passed"
+            },
+            {
+              "engine": "firefox",
+              "id": "B-010",
+              "status": "not-run"
+            },
+            {
+              "engine": "webkit",
+              "id": "B-010",
+              "status": "passed"
+            },
+            {
+              "engine": "chromium",
+              "id": "B-030",
+              "status": "passed"
+            },
+            {
+              "engine": "firefox",
+              "id": "B-030",
+              "status": "not-run"
+            },
+            {
+              "engine": "webkit",
+              "id": "B-030",
+              "status": "passed"
+            },
+            {
+              "engine": "chromium",
+              "id": "B-031",
+              "status": "passed"
+            },
+            {
+              "engine": "firefox",
+              "id": "B-031",
+              "status": "not-run"
+            },
+            {
+              "engine": "webkit",
+              "id": "B-031",
+              "status": "passed"
+            }
+          ],
+          "types": []
+        },
+        {
+          "id": "F2",
+          "reviewLines": [
+            35,
+            74
+          ],
+          "concern": "Conditional/range reads and writes preserve actual HTTP semantics",
+          "nodePatterns": [
+            "^RACE-COND-Range-",
+            "^RACE-COND-If-Range-",
+            "^RACE-COND-If-Match-",
+            "^RACE-COND-If-None-Match-",
+            "^RACE-COND-If-Modified-Since-",
+            "^RACE-COND-If-Unmodified-Since-"
+          ],
+          "browserIds": [],
+          "compilers": [],
+          "limits": "24 warm/reverse/presence cases assert received fields,206/304/412/200 and exact bytes; cache is not an RFC revalidation engine.",
+          "status": "passed",
+          "node": [
+            {
+              "pattern": "^RACE-COND-Range-",
+              "cases": 4,
+              "status": "passed"
+            },
+            {
+              "pattern": "^RACE-COND-If-Range-",
+              "cases": 4,
+              "status": "passed"
+            },
+            {
+              "pattern": "^RACE-COND-If-Match-",
+              "cases": 4,
+              "status": "passed"
+            },
+            {
+              "pattern": "^RACE-COND-If-None-Match-",
+              "cases": 4,
+              "status": "passed"
+            },
+            {
+              "pattern": "^RACE-COND-If-Modified-Since-",
+              "cases": 4,
+              "status": "passed"
+            },
+            {
+              "pattern": "^RACE-COND-If-Unmodified-Since-",
+              "cases": 4,
+              "status": "passed"
+            }
+          ],
+          "browser": [],
+          "types": []
+        },
+        {
+          "id": "F3",
+          "reviewLines": [
+            75,
+            107
+          ],
+          "concern": "Final body bytes, explicit versus inferred MIME and native multipart boundaries",
+          "nodePatterns": [
+            "^body replacement ",
+            "^ADV-BODY-"
+          ],
+          "browserIds": [
+            "B-004",
+            "B-005",
+            "B-036"
+          ],
+          "compilers": [],
+          "limits": "64 pair transitions plus derived POST/PUT/native controls and explicit MIME; arbitrary chain length is not exhaustive.",
+          "status": "not-run",
+          "node": [
+            {
+              "pattern": "^body replacement ",
+              "cases": 64,
+              "status": "passed"
+            },
+            {
+              "pattern": "^ADV-BODY-",
+              "cases": 48,
+              "status": "passed"
+            }
+          ],
+          "browser": [
+            {
+              "engine": "chromium",
+              "id": "B-004",
+              "status": "passed"
+            },
+            {
+              "engine": "firefox",
+              "id": "B-004",
+              "status": "not-run"
+            },
+            {
+              "engine": "webkit",
+              "id": "B-004",
+              "status": "passed"
+            },
+            {
+              "engine": "chromium",
+              "id": "B-005",
+              "status": "passed"
+            },
+            {
+              "engine": "firefox",
+              "id": "B-005",
+              "status": "not-run"
+            },
+            {
+              "engine": "webkit",
+              "id": "B-005",
+              "status": "passed"
+            },
+            {
+              "engine": "chromium",
+              "id": "B-036",
+              "status": "passed"
+            },
+            {
+              "engine": "firefox",
+              "id": "B-036",
+              "status": "not-run"
+            },
+            {
+              "engine": "webkit",
+              "id": "B-036",
+              "status": "passed"
+            }
+          ],
+          "types": []
+        },
+        {
+          "id": "F4",
+          "reviewLines": [
+            108,
+            141
+          ],
+          "concern": "Relative/absolute/base/root/query/trailing separator fidelity",
+          "nodePatterns": [
+            "^base prefix",
+            "^ADV-URL-join-",
+            "^ADV-URL-static-data-"
+          ],
+          "browserIds": [
+            "B-002"
+          ],
+          "compilers": [],
+          "limits": "Finite examples; not every interleaving.",
+          "status": "not-run",
+          "node": [
+            {
+              "pattern": "^base prefix",
+              "cases": 11,
+              "status": "passed"
+            },
+            {
+              "pattern": "^ADV-URL-join-",
+              "cases": 30,
+              "status": "passed"
+            },
+            {
+              "pattern": "^ADV-URL-static-data-",
+              "cases": 6,
+              "status": "passed"
+            }
+          ],
+          "browser": [
+            {
+              "engine": "chromium",
+              "id": "B-002",
+              "status": "passed"
+            },
+            {
+              "engine": "firefox",
+              "id": "B-002",
+              "status": "not-run"
+            },
+            {
+              "engine": "webkit",
+              "id": "B-002",
+              "status": "passed"
+            }
+          ],
+          "types": []
+        },
+        {
+          "id": "F5",
+          "reviewLines": [
+            142,
+            171
+          ],
+          "concern": "Sibling AvirxError cancellation belongs to current operation",
+          "nodePatterns": [
+            "^RACE-ABORT-pre-aborted:",
+            "^RACE-ABORT-auth:",
+            "^RACE-ABORT-contract input:",
+            "^RACE-ABORT-request hook:",
+            "^RACE-ABORT-native fetch:",
+            "^RACE-ABORT-concurrency:",
+            "^RACE-ABORT-rate:",
+            "^RACE-ABORT-retry:",
+            "^RACE-ABORT-buffered body:",
+            "^RACE-ABORT-native-body:"
+          ],
+          "browserIds": [
+            "B-019",
+            "B-020",
+            "B-033",
+            "B-034",
+            "B-035"
+          ],
+          "compilers": [],
+          "limits": "Observable stages and barriers; native Response body errors retain platform ownership.",
+          "status": "not-run",
+          "node": [
+            {
+              "pattern": "^RACE-ABORT-pre-aborted:",
+              "cases": 1,
+              "status": "passed"
+            },
+            {
+              "pattern": "^RACE-ABORT-auth:",
+              "cases": 1,
+              "status": "passed"
+            },
+            {
+              "pattern": "^RACE-ABORT-contract input:",
+              "cases": 1,
+              "status": "passed"
+            },
+            {
+              "pattern": "^RACE-ABORT-request hook:",
+              "cases": 1,
+              "status": "passed"
+            },
+            {
+              "pattern": "^RACE-ABORT-native fetch:",
+              "cases": 1,
+              "status": "passed"
+            },
+            {
+              "pattern": "^RACE-ABORT-concurrency:",
+              "cases": 1,
+              "status": "passed"
+            },
+            {
+              "pattern": "^RACE-ABORT-rate:",
+              "cases": 1,
+              "status": "passed"
+            },
+            {
+              "pattern": "^RACE-ABORT-retry:",
+              "cases": 1,
+              "status": "passed"
+            },
+            {
+              "pattern": "^RACE-ABORT-buffered body:",
+              "cases": 1,
+              "status": "passed"
+            },
+            {
+              "pattern": "^RACE-ABORT-native-body:",
+              "cases": 1,
+              "status": "passed"
+            }
+          ],
+          "browser": [
+            {
+              "engine": "chromium",
+              "id": "B-019",
+              "status": "passed"
+            },
+            {
+              "engine": "firefox",
+              "id": "B-019",
+              "status": "not-run"
+            },
+            {
+              "engine": "webkit",
+              "id": "B-019",
+              "status": "passed"
+            },
+            {
+              "engine": "chromium",
+              "id": "B-020",
+              "status": "passed"
+            },
+            {
+              "engine": "firefox",
+              "id": "B-020",
+              "status": "not-run"
+            },
+            {
+              "engine": "webkit",
+              "id": "B-020",
+              "status": "passed"
+            },
+            {
+              "engine": "chromium",
+              "id": "B-033",
+              "status": "passed"
+            },
+            {
+              "engine": "firefox",
+              "id": "B-033",
+              "status": "not-run"
+            },
+            {
+              "engine": "webkit",
+              "id": "B-033",
+              "status": "passed"
+            },
+            {
+              "engine": "chromium",
+              "id": "B-034",
+              "status": "passed"
+            },
+            {
+              "engine": "firefox",
+              "id": "B-034",
+              "status": "not-run"
+            },
+            {
+              "engine": "webkit",
+              "id": "B-034",
+              "status": "passed"
+            },
+            {
+              "engine": "chromium",
+              "id": "B-035",
+              "status": "passed"
+            },
+            {
+              "engine": "firefox",
+              "id": "B-035",
+              "status": "not-run"
+            },
+            {
+              "engine": "webkit",
+              "id": "B-035",
+              "status": "passed"
+            }
+          ],
+          "types": []
+        },
+        {
+          "id": "F6",
+          "reviewLines": [
+            172,
+            206
+          ],
+          "concern": "Strict unknown-property rejection and generic builder assignability",
+          "nodePatterns": [],
+          "browserIds": [],
+          "compilers": [
+            "5.0.4",
+            "5.9.3",
+            "7.0.2"
+          ],
+          "limits": "Strict DOM NodeNext consumers, noUncheckedIndexedAccess=false;25 negative assertions plus generic helpers.",
+          "status": "passed",
+          "node": [],
+          "browser": [],
+          "types": [
+            {
+              "version": "5.0.4",
+              "status": "passed"
+            },
+            {
+              "version": "5.9.3",
+              "status": "passed"
+            },
+            {
+              "version": "7.0.2",
+              "status": "passed"
+            }
+          ]
+        },
+        {
+          "id": "S1",
+          "reviewLines": [
+            213,
+            213
+          ],
+          "concern": "Reserved then rejects without Promise assimilation or transport",
+          "nodePatterns": [
+            "^KEYS-THEN-"
+          ],
+          "browserIds": [],
+          "compilers": [
+            "5.0.4",
+            "5.9.3",
+            "7.0.2"
+          ],
+          "limits": "Finite examples; not every interleaving.",
+          "status": "passed",
+          "node": [
+            {
+              "pattern": "^KEYS-THEN-",
+              "cases": 2,
+              "status": "passed"
+            }
+          ],
+          "browser": [],
+          "types": [
+            {
+              "version": "5.0.4",
+              "status": "passed"
+            },
+            {
+              "version": "5.9.3",
+              "status": "passed"
+            },
+            {
+              "version": "7.0.2",
+              "status": "passed"
+            }
+          ]
+        },
+        {
+          "id": "S2",
+          "reviewLines": [
+            214,
+            214
+          ],
+          "concern": "Own symbol contract keys reject instead of disappearing",
+          "nodePatterns": [
+            "^KEYS-SYMBOL-"
+          ],
+          "browserIds": [],
+          "compilers": [
+            "5.0.4",
+            "5.9.3",
+            "7.0.2"
+          ],
+          "limits": "Finite examples; not every interleaving.",
+          "status": "passed",
+          "node": [
+            {
+              "pattern": "^KEYS-SYMBOL-",
+              "cases": 2,
+              "status": "passed"
+            }
+          ],
+          "browser": [],
+          "types": [
+            {
+              "version": "5.0.4",
+              "status": "passed"
+            },
+            {
+              "version": "5.9.3",
+              "status": "passed"
+            },
+            {
+              "version": "7.0.2",
+              "status": "passed"
+            }
+          ]
+        },
+        {
+          "id": "S3",
+          "reviewLines": [
+            215,
+            215
+          ],
+          "concern": "Unsafe placeholder names cannot hide a second dot segment",
+          "nodePatterns": [
+            "^ADV-URL-invalid-placeholder-",
+            "^ADV-URL-valid-placeholder-"
+          ],
+          "browserIds": [
+            "B-037"
+          ],
+          "compilers": [
+            "5.0.4",
+            "5.9.3",
+            "7.0.2"
+          ],
+          "limits": "Finite examples; not every interleaving.",
+          "status": "not-run",
+          "node": [
+            {
+              "pattern": "^ADV-URL-invalid-placeholder-",
+              "cases": 8,
+              "status": "passed"
+            },
+            {
+              "pattern": "^ADV-URL-valid-placeholder-",
+              "cases": 10,
+              "status": "passed"
+            }
+          ],
+          "browser": [
+            {
+              "engine": "chromium",
+              "id": "B-037",
+              "status": "passed"
+            },
+            {
+              "engine": "firefox",
+              "id": "B-037",
+              "status": "not-run"
+            },
+            {
+              "engine": "webkit",
+              "id": "B-037",
+              "status": "passed"
+            }
+          ],
+          "types": [
+            {
+              "version": "5.0.4",
+              "status": "passed"
+            },
+            {
+              "version": "5.9.3",
+              "status": "passed"
+            },
+            {
+              "version": "7.0.2",
+              "status": "passed"
+            }
+          ]
+        },
+        {
+          "id": "S4",
+          "reviewLines": [
+            216,
+            216
+          ],
+          "concern": "Elapsed cache/rate/duration clocks differ from wall-clock dates",
+          "nodePatterns": [
+            "^cache TTL and rate windows survive",
+            "^ADV-CLOCK-native-headers-wall-shift-",
+            "^RACE-RETRY-AFTER-"
+          ],
+          "browserIds": [],
+          "compilers": [],
+          "limits": "Forward/back wall shifts and bounded Retry-After seconds/date/clamp metadata with abort; no 60-second sleep or host suspend proof.",
+          "status": "passed",
+          "node": [
+            {
+              "pattern": "^cache TTL and rate windows survive",
+              "cases": 1,
+              "status": "passed"
+            },
+            {
+              "pattern": "^ADV-CLOCK-native-headers-wall-shift-",
+              "cases": 2,
+              "status": "passed"
+            },
+            {
+              "pattern": "^RACE-RETRY-AFTER-",
+              "cases": 3,
+              "status": "passed"
+            }
+          ],
+          "browser": [],
+          "types": []
+        },
+        {
+          "id": "S5",
+          "reviewLines": [
+            217,
+            217
+          ],
+          "concern": "URL userinfo rejects before transport and diagnostic leakage",
+          "nodePatterns": [
+            "^URL credentials reject",
+            "^ADV-URL-userinfo-"
+          ],
+          "browserIds": [],
+          "compilers": [],
+          "limits": "Finite examples; not every interleaving.",
+          "status": "passed",
+          "node": [
+            {
+              "pattern": "^URL credentials reject",
+              "cases": 1,
+              "status": "passed"
+            },
+            {
+              "pattern": "^ADV-URL-userinfo-",
+              "cases": 3,
+              "status": "passed"
+            }
+          ],
+          "browser": [],
+          "types": []
+        },
+        {
+          "id": "S6",
+          "reviewLines": [
+            218,
+            218
+          ],
+          "concern": "Awaited path schema outputs match exact runtime keys",
+          "nodePatterns": [
+            "^KEYS-ASYNC-PATH"
+          ],
+          "browserIds": [],
+          "compilers": [
+            "5.0.4",
+            "5.9.3",
+            "7.0.2"
+          ],
+          "limits": "Finite examples; not every interleaving.",
+          "status": "passed",
+          "node": [
+            {
+              "pattern": "^KEYS-ASYNC-PATH",
+              "cases": 1,
+              "status": "passed"
+            }
+          ],
+          "browser": [],
+          "types": [
+            {
+              "version": "5.0.4",
+              "status": "passed"
+            },
+            {
+              "version": "5.9.3",
+              "status": "passed"
+            },
+            {
+              "version": "7.0.2",
+              "status": "passed"
+            }
+          ]
+        },
+        {
+          "id": "C1",
+          "reviewLines": [
+            226,
+            243
+          ],
+          "concern": "Stable operation error kinds and current request metadata",
+          "nodePatterns": [
+            "^operation errors have stable kinds",
+            "^decode failures and schema validation failures",
+            "^HTTP error schemas await"
+          ],
+          "browserIds": [
+            "B-022"
+          ],
+          "compilers": [],
+          "limits": "Finite examples; not every interleaving.",
+          "status": "not-run",
+          "node": [
+            {
+              "pattern": "^operation errors have stable kinds",
+              "cases": 1,
+              "status": "passed"
+            },
+            {
+              "pattern": "^decode failures and schema validation failures",
+              "cases": 1,
+              "status": "passed"
+            },
+            {
+              "pattern": "^HTTP error schemas await",
+              "cases": 1,
+              "status": "passed"
+            }
+          ],
+          "browser": [
+            {
+              "engine": "chromium",
+              "id": "B-022",
+              "status": "passed"
+            },
+            {
+              "engine": "firefox",
+              "id": "B-022",
+              "status": "not-run"
+            },
+            {
+              "engine": "webkit",
+              "id": "B-022",
+              "status": "passed"
+            }
+          ],
+          "types": []
+        },
+        {
+          "id": "C2",
+          "reviewLines": [
+            244,
+            258
+          ],
+          "concern": "Callback ownership is consistent across phases and terminals",
+          "nodePatterns": [
+            "^RACE-CALLBACK-",
+            "^RACE-CONTRACT-callback-"
+          ],
+          "browserIds": [
+            "B-023",
+            "B-032"
+          ],
+          "compilers": [],
+          "limits": "60sibling-error combinations plus sync/async and abortedcallback controls; callback code must itself settle.",
+          "status": "not-run",
+          "node": [
+            {
+              "pattern": "^RACE-CALLBACK-",
+              "cases": 60,
+              "status": "passed"
+            },
+            {
+              "pattern": "^RACE-CONTRACT-callback-",
+              "cases": 2,
+              "status": "passed"
+            }
+          ],
+          "browser": [
+            {
+              "engine": "chromium",
+              "id": "B-023",
+              "status": "passed"
+            },
+            {
+              "engine": "firefox",
+              "id": "B-023",
+              "status": "not-run"
+            },
+            {
+              "engine": "webkit",
+              "id": "B-023",
+              "status": "passed"
+            },
+            {
+              "engine": "chromium",
+              "id": "B-032",
+              "status": "passed"
+            },
+            {
+              "engine": "firefox",
+              "id": "B-032",
+              "status": "not-run"
+            },
+            {
+              "engine": "webkit",
+              "id": "B-032",
+              "status": "passed"
+            }
+          ],
+          "types": []
+        },
+        {
+          "id": "C3",
+          "reviewLines": [
+            259,
+            277
+          ],
+          "concern": "Clear prevents older eligible operations from refilling cache",
+          "nodePatterns": [
+            "^RACE-CLEAR-request hook:",
+            "^RACE-CLEAR-network:",
+            "^RACE-CLEAR-retry:",
+            "^RACE-CLEAR-contract input:",
+            "^RACE-CLEAR-output parser:",
+            "^RACE-CLEAR-body-copy:"
+          ],
+          "browserIds": [
+            "B-016"
+          ],
+          "compilers": [],
+          "limits": "Auth-policy operations are cache-ineligible and are only privacy/progress controls, not generation proof.",
+          "status": "not-run",
+          "node": [
+            {
+              "pattern": "^RACE-CLEAR-request hook:",
+              "cases": 1,
+              "status": "passed"
+            },
+            {
+              "pattern": "^RACE-CLEAR-network:",
+              "cases": 1,
+              "status": "passed"
+            },
+            {
+              "pattern": "^RACE-CLEAR-retry:",
+              "cases": 1,
+              "status": "passed"
+            },
+            {
+              "pattern": "^RACE-CLEAR-contract input:",
+              "cases": 1,
+              "status": "passed"
+            },
+            {
+              "pattern": "^RACE-CLEAR-output parser:",
+              "cases": 1,
+              "status": "passed"
+            },
+            {
+              "pattern": "^RACE-CLEAR-body-copy:",
+              "cases": 1,
+              "status": "passed"
+            }
+          ],
+          "browser": [
+            {
+              "engine": "chromium",
+              "id": "B-016",
+              "status": "passed"
+            },
+            {
+              "engine": "firefox",
+              "id": "B-016",
+              "status": "not-run"
+            },
+            {
+              "engine": "webkit",
+              "id": "B-016",
+              "status": "passed"
+            }
+          ],
+          "types": []
+        },
+        {
+          "id": "C4",
+          "reviewLines": [
+            278,
+            291
+          ],
+          "concern": "Supported public snapshots and advanced live handles",
+          "nodePatterns": [
+            "^shared policy handles support",
+            "^RACE-HANDLES-admission:",
+            "^RACE-CLEAR-body-copy:"
+          ],
+          "browserIds": [],
+          "compilers": [
+            "5.0.4",
+            "5.9.3",
+            "7.0.2"
+          ],
+          "limits": "Caller releases each directly acquired concurrency slot exactly once; misuse is outside promise.",
+          "status": "passed",
+          "node": [
+            {
+              "pattern": "^shared policy handles support",
+              "cases": 1,
+              "status": "passed"
+            },
+            {
+              "pattern": "^RACE-HANDLES-admission:",
+              "cases": 1,
+              "status": "passed"
+            },
+            {
+              "pattern": "^RACE-CLEAR-body-copy:",
+              "cases": 1,
+              "status": "passed"
+            }
+          ],
+          "browser": [],
+          "types": [
+            {
+              "version": "5.0.4",
+              "status": "passed"
+            },
+            {
+              "version": "5.9.3",
+              "status": "passed"
+            },
+            {
+              "version": "7.0.2",
+              "status": "passed"
+            }
+          ]
+        },
+        {
+          "id": "C5",
+          "reviewLines": [
+            292,
+            305
+          ],
+          "concern": "Timeout/concurrency end at headers and body ownership remains native",
+          "nodePatterns": [
+            "^slow body does not occupy concurrency",
+            "^send leaves network bodies",
+            "^RACE-ABORT-native-body:"
+          ],
+          "browserIds": [
+            "B-012",
+            "B-017",
+            "B-018",
+            "B-019"
+          ],
+          "compilers": [],
+          "limits": "No global operation/memory bound; caller-owned raw/error bodies need consume/cancel; callbacks must settle.",
+          "status": "not-run",
+          "node": [
+            {
+              "pattern": "^slow body does not occupy concurrency",
+              "cases": 1,
+              "status": "passed"
+            },
+            {
+              "pattern": "^send leaves network bodies",
+              "cases": 1,
+              "status": "passed"
+            },
+            {
+              "pattern": "^RACE-ABORT-native-body:",
+              "cases": 1,
+              "status": "passed"
+            }
+          ],
+          "browser": [
+            {
+              "engine": "chromium",
+              "id": "B-012",
+              "status": "passed"
+            },
+            {
+              "engine": "firefox",
+              "id": "B-012",
+              "status": "not-run"
+            },
+            {
+              "engine": "webkit",
+              "id": "B-012",
+              "status": "passed"
+            },
+            {
+              "engine": "chromium",
+              "id": "B-017",
+              "status": "passed"
+            },
+            {
+              "engine": "firefox",
+              "id": "B-017",
+              "status": "not-run"
+            },
+            {
+              "engine": "webkit",
+              "id": "B-017",
+              "status": "passed"
+            },
+            {
+              "engine": "chromium",
+              "id": "B-018",
+              "status": "passed"
+            },
+            {
+              "engine": "firefox",
+              "id": "B-018",
+              "status": "not-run"
+            },
+            {
+              "engine": "webkit",
+              "id": "B-018",
+              "status": "passed"
+            },
+            {
+              "engine": "chromium",
+              "id": "B-019",
+              "status": "passed"
+            },
+            {
+              "engine": "firefox",
+              "id": "B-019",
+              "status": "not-run"
+            },
+            {
+              "engine": "webkit",
+              "id": "B-019",
+              "status": "passed"
+            }
+          ],
+          "types": []
+        },
+        {
+          "id": "P-CORS",
+          "reviewLines": [
+            312,
+            325
+          ],
+          "concern": "CORS-hidden Vary cannot defeat cache privacy",
+          "nodePatterns": [
+            "^cache bypasses response"
+          ],
+          "browserIds": [
+            "B-013",
+            "B-026",
+            "B-027",
+            "B-028"
+          ],
+          "compilers": [],
+          "limits": "Finite examples; not every interleaving.",
+          "status": "not-run",
+          "node": [
+            {
+              "pattern": "^cache bypasses response",
+              "cases": 8,
+              "status": "passed"
+            }
+          ],
+          "browser": [
+            {
+              "engine": "chromium",
+              "id": "B-013",
+              "status": "passed"
+            },
+            {
+              "engine": "firefox",
+              "id": "B-013",
+              "status": "not-run"
+            },
+            {
+              "engine": "webkit",
+              "id": "B-013",
+              "status": "passed"
+            },
+            {
+              "engine": "chromium",
+              "id": "B-026",
+              "status": "passed"
+            },
+            {
+              "engine": "firefox",
+              "id": "B-026",
+              "status": "not-run"
+            },
+            {
+              "engine": "webkit",
+              "id": "B-026",
+              "status": "passed"
+            },
+            {
+              "engine": "chromium",
+              "id": "B-027",
+              "status": "passed"
+            },
+            {
+              "engine": "firefox",
+              "id": "B-027",
+              "status": "not-run"
+            },
+            {
+              "engine": "webkit",
+              "id": "B-027",
+              "status": "passed"
+            },
+            {
+              "engine": "chromium",
+              "id": "B-028",
+              "status": "passed"
+            },
+            {
+              "engine": "firefox",
+              "id": "B-028",
+              "status": "not-run"
+            },
+            {
+              "engine": "webkit",
+              "id": "B-028",
+              "status": "passed"
+            }
+          ],
+          "types": []
+        },
+        {
+          "id": "P-EMPTY",
+          "reviewLines": [
+            312,
+            325
+          ],
+          "concern": "Absent and empty headers differ; cURL literal at-sign stays inline",
+          "nodePatterns": [
+            "^cache keys distinguish missing/empty",
+            "^ADV-CURL-leading-at-"
+          ],
+          "browserIds": [
+            "B-029"
+          ],
+          "compilers": [],
+          "limits": "Finite examples; not every interleaving.",
+          "status": "not-run",
+          "node": [
+            {
+              "pattern": "^cache keys distinguish missing/empty",
+              "cases": 1,
+              "status": "passed"
+            },
+            {
+              "pattern": "^ADV-CURL-leading-at-",
+              "cases": 1,
+              "status": "passed"
+            }
+          ],
+          "browser": [
+            {
+              "engine": "chromium",
+              "id": "B-029",
+              "status": "passed"
+            },
+            {
+              "engine": "firefox",
+              "id": "B-029",
+              "status": "not-run"
+            },
+            {
+              "engine": "webkit",
+              "id": "B-029",
+              "status": "passed"
+            }
+          ],
+          "types": []
+        },
+        {
+          "id": "P-SNAPSHOT",
+          "reviewLines": [
+            312,
+            325
+          ],
+          "concern": "Mutable inspection values cannot rewrite other executions",
+          "nodePatterns": [
+            "^JSON attachment deeply snapshots",
+            "^ArrayBuffer, URLSearchParams",
+            "^ADV-BODY-"
+          ],
+          "browserIds": [
+            "B-003"
+          ],
+          "compilers": [],
+          "limits": "Finite examples; not every interleaving.",
+          "status": "not-run",
+          "node": [
+            {
+              "pattern": "^JSON attachment deeply snapshots",
+              "cases": 1,
+              "status": "passed"
+            },
+            {
+              "pattern": "^ArrayBuffer, URLSearchParams",
+              "cases": 1,
+              "status": "passed"
+            },
+            {
+              "pattern": "^ADV-BODY-",
+              "cases": 48,
+              "status": "passed"
+            }
+          ],
+          "browser": [
+            {
+              "engine": "chromium",
+              "id": "B-003",
+              "status": "passed"
+            },
+            {
+              "engine": "firefox",
+              "id": "B-003",
+              "status": "not-run"
+            },
+            {
+              "engine": "webkit",
+              "id": "B-003",
+              "status": "passed"
+            }
+          ],
+          "types": []
+        },
+        {
+          "id": "P-DISPOSAL",
+          "reviewLines": [
+            312,
+            325
+          ],
+          "concern": "Abandoned retry/hook-failed endless bodies close",
+          "nodePatterns": [
+            "^retry cancels a never-ending",
+            "^response-hook rejection cancels",
+            "^discarded retry response cancels",
+            "^response hook failure cancels unfinished"
+          ],
+          "browserIds": [],
+          "compilers": [],
+          "limits": "Server close observations and available policy capacity; no general leak claim.",
+          "status": "passed",
+          "node": [
+            {
+              "pattern": "^retry cancels a never-ending",
+              "cases": 1,
+              "status": "passed"
+            },
+            {
+              "pattern": "^response-hook rejection cancels",
+              "cases": 1,
+              "status": "passed"
+            },
+            {
+              "pattern": "^discarded retry response cancels",
+              "cases": 1,
+              "status": "passed"
+            },
+            {
+              "pattern": "^response hook failure cancels unfinished",
+              "cases": 1,
+              "status": "passed"
+            }
+          ],
+          "browser": [],
+          "types": []
+        },
+        {
+          "id": "P-ADMISSION",
+          "reviewLines": [
+            312,
+            325
+          ],
+          "concern": "Rate follows hooks/concurrency and cancelled queues release ownership",
+          "nodePatterns": [
+            "^hooks complete before policy",
+            "^queued concurrency work cannot reserve",
+            "^concurrency FIFO",
+            "^rate FIFO"
+          ],
+          "browserIds": [],
+          "compilers": [],
+          "limits": "Bounded queues and observable diagnostics; no throughput/latency target.",
+          "status": "passed",
+          "node": [
+            {
+              "pattern": "^hooks complete before policy",
+              "cases": 1,
+              "status": "passed"
+            },
+            {
+              "pattern": "^queued concurrency work cannot reserve",
+              "cases": 1,
+              "status": "passed"
+            },
+            {
+              "pattern": "^concurrency FIFO",
+              "cases": 1,
+              "status": "passed"
+            },
+            {
+              "pattern": "^rate FIFO",
+              "cases": 1,
+              "status": "passed"
+            }
+          ],
+          "browser": [],
+          "types": []
+        },
+        {
+          "id": "P-BOUNDS",
+          "reviewLines": [
+            312,
+            325
+          ],
+          "concern": "Finite cache entry/body budgets and expiry",
+          "nodePatterns": [
+            "^cache bounds entries/bytes",
+            "^aggregate byte budget",
+            "^maxBytes requires valid Content-Length"
+          ],
+          "browserIds": [],
+          "compilers": [],
+          "limits": "Finite examples; not every interleaving.",
+          "status": "passed",
+          "node": [
+            {
+              "pattern": "^cache bounds entries/bytes",
+              "cases": 1,
+              "status": "passed"
+            },
+            {
+              "pattern": "^aggregate byte budget",
+              "cases": 1,
+              "status": "passed"
+            },
+            {
+              "pattern": "^maxBytes requires valid Content-Length",
+              "cases": 1,
+              "status": "passed"
+            }
+          ],
+          "browser": [],
+          "types": []
+        },
+        {
+          "id": "P-AUTH",
+          "reviewLines": [
+            312,
+            325
+          ],
+          "concern": "Public auth state and query overrides stay redacted",
+          "nodePatterns": [
+            "^bearer/basic/header/query auth",
+            "^query API credential remains redacted"
+          ],
+          "browserIds": [
+            "B-007",
+            "B-015"
+          ],
+          "compilers": [],
+          "limits": "Finite examples; not every interleaving.",
+          "status": "not-run",
+          "node": [
+            {
+              "pattern": "^bearer/basic/header/query auth",
+              "cases": 1,
+              "status": "passed"
+            },
+            {
+              "pattern": "^query API credential remains redacted",
+              "cases": 1,
+              "status": "passed"
+            }
+          ],
+          "browser": [
+            {
+              "engine": "chromium",
+              "id": "B-007",
+              "status": "passed"
+            },
+            {
+              "engine": "firefox",
+              "id": "B-007",
+              "status": "not-run"
+            },
+            {
+              "engine": "webkit",
+              "id": "B-007",
+              "status": "passed"
+            },
+            {
+              "engine": "chromium",
+              "id": "B-015",
+              "status": "passed"
+            },
+            {
+              "engine": "firefox",
+              "id": "B-015",
+              "status": "not-run"
+            },
+            {
+              "engine": "webkit",
+              "id": "B-015",
+              "status": "passed"
+            }
+          ],
+          "types": []
+        },
+        {
+          "id": "APP",
+          "reviewLines": [
+            388,
+            398
+          ],
+          "concern": "Actual consumer refresh/upload/stream/mutation interactions",
+          "nodePatterns": [
+            "^request auth overrides client auth",
+            "^multipart fluent",
+            "^RACE-STRESS-mixed seed="
+          ],
+          "browserIds": [
+            "B-006",
+            "B-004",
+            "B-016",
+            "B-019",
+            "B-025"
+          ],
+          "compilers": [],
+          "limits": "192 operations per stress seed reuse shared cache keys with authoritative post-mutation barriers; synthetic local application only.",
+          "status": "not-run",
+          "node": [
+            {
+              "pattern": "^request auth overrides client auth",
+              "cases": 1,
+              "status": "passed"
+            },
+            {
+              "pattern": "^multipart fluent",
+              "cases": 1,
+              "status": "passed"
+            },
+            {
+              "pattern": "^RACE-STRESS-mixed seed=",
+              "cases": 6,
+              "status": "passed"
+            }
+          ],
+          "browser": [
+            {
+              "engine": "chromium",
+              "id": "B-006",
+              "status": "passed"
+            },
+            {
+              "engine": "firefox",
+              "id": "B-006",
+              "status": "not-run"
+            },
+            {
+              "engine": "webkit",
+              "id": "B-006",
+              "status": "passed"
+            },
+            {
+              "engine": "chromium",
+              "id": "B-004",
+              "status": "passed"
+            },
+            {
+              "engine": "firefox",
+              "id": "B-004",
+              "status": "not-run"
+            },
+            {
+              "engine": "webkit",
+              "id": "B-004",
+              "status": "passed"
+            },
+            {
+              "engine": "chromium",
+              "id": "B-016",
+              "status": "passed"
+            },
+            {
+              "engine": "firefox",
+              "id": "B-016",
+              "status": "not-run"
+            },
+            {
+              "engine": "webkit",
+              "id": "B-016",
+              "status": "passed"
+            },
+            {
+              "engine": "chromium",
+              "id": "B-019",
+              "status": "passed"
+            },
+            {
+              "engine": "firefox",
+              "id": "B-019",
+              "status": "not-run"
+            },
+            {
+              "engine": "webkit",
+              "id": "B-019",
+              "status": "passed"
+            },
+            {
+              "engine": "chromium",
+              "id": "B-025",
+              "status": "passed"
+            },
+            {
+              "engine": "firefox",
+              "id": "B-025",
+              "status": "not-run"
+            },
+            {
+              "engine": "webkit",
+              "id": "B-025",
+              "status": "passed"
+            }
+          ],
+          "types": []
+        },
+        {
+          "id": "QF-001",
+          "reviewLines": [
+            172,
+            206
+          ],
+          "concern": "Inherited Object path names work at supported compiler floor",
+          "nodePatterns": [],
+          "browserIds": [],
+          "compilers": [
+            "5.0.4",
+            "5.9.3",
+            "7.0.2"
+          ],
+          "limits": "Resolved only on draftPRcandidate; merged baseline still fails. Includes7 previously failing names, exact extra/symbol-key rejection.",
+          "status": "passed",
+          "node": [],
+          "browser": [],
+          "types": [
+            {
+              "version": "5.0.4",
+              "status": "passed"
+            },
+            {
+              "version": "5.9.3",
+              "status": "passed"
+            },
+            {
+              "version": "7.0.2",
+              "status": "passed"
+            }
+          ]
+        }
+      ],
+      "ignoredOtherCandidateReports": [
+        "browser-firefox.json",
+        "browser-chromium.json",
+        "browser-webkit.json",
+        "run-runtime.json",
+        "run-soak.json",
+        "types.json"
+      ],
+      "limits": "Evidence mapping checks observed passing IDs, not assertion quality or exhaustive behavior. Independent review and complete CI gates remain required."
+    }
+  },
+  "scope": "Local measured evidence. CI native Firefox and maintained Node matrix are separate. The product candidate is unmerged."
+}
