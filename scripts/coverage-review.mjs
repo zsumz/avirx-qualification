@@ -35,8 +35,8 @@ const rows = matrix.rows.map(row => {
  });
  const browser = row.browserIds.flatMap(id => ['chromium','firefox','webkit'].map(engine => {
   const reports = browsers.filter(report => report.engine === engine);
-  const checks = reports.flatMap(report => report.checks.filter(check => check.id === id));
-  return { engine, id, status: checks.length && checks.every(check => check.status === 'passed') ? 'passed' : checks.length ? 'failed' : 'not-run' };
+  const checks = reports.flatMap(report => report.checks.filter(check => check.id === id).map(check => ({ ...check, enginePassed: report.status === 'passed' && (report.cleanupErrors?.length ?? 0) === 0 })));
+  return { engine, id, status: checks.length && checks.every(check => check.status === 'passed' && check.enginePassed) ? 'passed' : checks.length ? 'failed' : 'not-run' };
  }));
  const types = row.compilers.map(version => {
   const matches = compilers.filter(report => report.version === version);

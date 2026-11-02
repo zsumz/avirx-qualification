@@ -31,6 +31,8 @@ Several details matter when interpreting future results:
 - **Do not count fixture success as a product assertion.** A successful server startup, browser launch or package install supplies the test environment. It does not establish the feature being tested.
 - **Preserve counterexamples.** Keep original seed and fixture, the assertion difference and reduced fixture where applicable. A reducer failure is a harness problem and must not erase the original mismatch.
 
+The final aggregate also requires an engine-level passed status and no cleanup errors before browser IDs can satisfy a row. A browser with all feature assertions passed but failed cleanup therefore fails both the browser lane and its review rows.
+
 ## Publication privacy review
 
 An independent scan inspected all tracked files and every unique blob in both reachable commits, plus commit identity metadata. It found no real credential/private-key or nonpublic dependency evidence. Authentication strings in tests are explicit fake fixture values. Dependency resolution uses the public npm registry; source links are public GitHub URLs, and requests use loopback or reserved invalid hostnames.

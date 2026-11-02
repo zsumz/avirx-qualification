@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-02T00:35:23.830Z",
+  "generatedAt": "2026-11-02T00:39:54.843Z",
   "suite": {
-    "revision": "c1d5e19cf2ccd4a17a74601f17bff25c755b3255",
+    "revision": "2cd5218632e752c2fa05f12612bc1feb6c7fa008",
     "dirty": true,
-    "inputSha256": "378e9f9d282c5d5b6eba45805f70c301604dd5f4baea079fc921ba4764153116"
+    "inputSha256": "35352d277bcba620db43efaf0be6024150ef29729d577f4f65de5820b3a3827c"
   },
   "packageContentSha256": "238259a9ddc4315479161cc7d24ebabfff6cbe5236a037f980753494ccb39423",
   "candidateCommit": "5b1df16e1c55ce9940b20f319529bea1291760fe",
@@ -18,12 +18,12 @@
   },
   "reports": {
     "run-fast.json": {
-      "generatedAt": "2026-11-02T00:34:06.700Z",
+      "generatedAt": "2026-11-02T00:38:59.421Z",
       "mode": "fast",
       "suite": {
-        "revision": "c1d5e19cf2ccd4a17a74601f17bff25c755b3255",
+        "revision": "2cd5218632e752c2fa05f12612bc1feb6c7fa008",
         "dirty": true,
-        "inputSha256": "378e9f9d282c5d5b6eba45805f70c301604dd5f4baea079fc921ba4764153116"
+        "inputSha256": "35352d277bcba620db43efaf0be6024150ef29729d577f4f65de5820b3a3827c"
       },
       "packageContentSha256": "238259a9ddc4315479161cc7d24ebabfff6cbe5236a037f980753494ccb39423",
       "candidateCommit": "5b1df16e1c55ce9940b20f319529bea1291760fe",
@@ -50,7 +50,7 @@
           "status": "passed",
           "code": 0,
           "signal": null,
-          "durationMs": 6790,
+          "durationMs": 6671,
           "tests": 658,
           "pass": 658,
           "fail": 0,
@@ -66,7 +66,7 @@
           "status": "passed",
           "code": 0,
           "signal": null,
-          "durationMs": 1364
+          "durationMs": 1297
         },
         {
           "name": "compat",
@@ -77,17 +77,17 @@
           "status": "passed",
           "code": 0,
           "signal": null,
-          "durationMs": 128
+          "durationMs": 129
         }
       ]
     },
     "run-soak.json": {
-      "generatedAt": "2026-11-02T00:34:40.508Z",
+      "generatedAt": "2026-11-02T00:39:33.091Z",
       "mode": "soak",
       "suite": {
-        "revision": "c1d5e19cf2ccd4a17a74601f17bff25c755b3255",
+        "revision": "2cd5218632e752c2fa05f12612bc1feb6c7fa008",
         "dirty": true,
-        "inputSha256": "378e9f9d282c5d5b6eba45805f70c301604dd5f4baea079fc921ba4764153116"
+        "inputSha256": "35352d277bcba620db43efaf0be6024150ef29729d577f4f65de5820b3a3827c"
       },
       "packageContentSha256": "238259a9ddc4315479161cc7d24ebabfff6cbe5236a037f980753494ccb39423",
       "candidateCommit": "5b1df16e1c55ce9940b20f319529bea1291760fe",
@@ -114,7 +114,7 @@
           "status": "passed",
           "code": 0,
           "signal": null,
-          "durationMs": 6667,
+          "durationMs": 6652,
           "tests": 658,
           "pass": 658,
           "fail": 0,
@@ -137,7 +137,7 @@
           "status": "passed",
           "code": 0,
           "signal": null,
-          "durationMs": 6742,
+          "durationMs": 6887,
           "tests": 658,
           "pass": 658,
           "fail": 0,
@@ -160,7 +160,7 @@
           "status": "passed",
           "code": 0,
           "signal": null,
-          "durationMs": 6564,
+          "durationMs": 6560,
           "tests": 658,
           "pass": 658,
           "fail": 0,
@@ -183,7 +183,7 @@
           "status": "passed",
           "code": 0,
           "signal": null,
-          "durationMs": 6927,
+          "durationMs": 6800,
           "tests": 658,
           "pass": 658,
           "fail": 0,
@@ -206,7 +206,7 @@
           "status": "passed",
           "code": 0,
           "signal": null,
-          "durationMs": 6756,
+          "durationMs": 6611,
           "tests": 658,
           "pass": 658,
           "fail": 0,
@@ -216,12 +216,12 @@
       ]
     },
     "types.json": {
-      "generatedAt": "2026-11-02T00:34:06.563Z",
+      "generatedAt": "2026-11-02T00:38:59.283Z",
       "node": "v24.19.0",
       "suite": {
-        "revision": "c1d5e19cf2ccd4a17a74601f17bff25c755b3255",
+        "revision": "2cd5218632e752c2fa05f12612bc1feb6c7fa008",
         "dirty": true,
-        "inputSha256": "378e9f9d282c5d5b6eba45805f70c301604dd5f4baea079fc921ba4764153116"
+        "inputSha256": "35352d277bcba620db43efaf0be6024150ef29729d577f4f65de5820b3a3827c"
       },
       "packageContentSha256": "238259a9ddc4315479161cc7d24ebabfff6cbe5236a037f980753494ccb39423",
       "candidateCommit": "5b1df16e1c55ce9940b20f319529bea1291760fe",
@@ -260,9 +260,9 @@
       "browserVersion": "151.0.7922.34",
       "playwrightVersion": "1.62.1",
       "suite": {
-        "revision": "c1d5e19cf2ccd4a17a74601f17bff25c755b3255",
+        "revision": "2cd5218632e752c2fa05f12612bc1feb6c7fa008",
         "dirty": true,
-        "inputSha256": "378e9f9d282c5d5b6eba45805f70c301604dd5f4baea079fc921ba4764153116"
+        "inputSha256": "35352d277bcba620db43efaf0be6024150ef29729d577f4f65de5820b3a3827c"
       },
       "packageContentSha256": "238259a9ddc4315479161cc7d24ebabfff6cbe5236a037f980753494ccb39423",
       "candidateCommit": "5b1df16e1c55ce9940b20f319529bea1291760fe",
@@ -313,14 +313,14 @@
           "id": "B-001",
           "name": "installed ESM root exports and native required APIs",
           "status": "passed",
-          "durationMs": 4,
+          "durationMs": 3,
           "assertions": 4
         },
         {
           "id": "B-002",
           "name": "encoded path and repeated unicode query reach actual HTTP",
           "status": "passed",
-          "durationMs": 17,
+          "durationMs": 25,
           "assertions": 3
         },
         {
@@ -334,21 +334,21 @@
           "id": "B-004",
           "name": "JSON replacement permits native multipart boundary and file bytes",
           "status": "passed",
-          "durationMs": 6,
+          "durationMs": 4,
           "assertions": 6
         },
         {
           "id": "B-005",
           "name": "explicit custom MIME remains caller owned through body replacement",
           "status": "passed",
-          "durationMs": 2,
+          "durationMs": 1,
           "assertions": 2
         },
         {
           "id": "B-006",
           "name": "retry resolves refreshed auth each attempt and hook order",
           "status": "passed",
-          "durationMs": 16,
+          "durationMs": 15,
           "assertions": 3
         },
         {
@@ -383,7 +383,7 @@
           "id": "B-011",
           "name": "same-origin public cache hit bypasses hooks and returns independent bytes",
           "status": "passed",
-          "durationMs": 5,
+          "durationMs": 4,
           "assertions": 4
         },
         {
@@ -404,7 +404,7 @@
           "id": "B-014",
           "name": "browser cookie sessions and private responses never cache",
           "status": "passed",
-          "durationMs": 4,
+          "durationMs": 3,
           "assertions": 3
         },
         {
@@ -418,7 +418,7 @@
           "id": "B-016",
           "name": "application mutation and explicit cache invalidation expose new version",
           "status": "passed",
-          "durationMs": 5,
+          "durationMs": 4,
           "assertions": 3
         },
         {
@@ -432,7 +432,7 @@
           "id": "B-018",
           "name": "fetch timeout ends at headers while slow body completes",
           "status": "passed",
-          "durationMs": 1505,
+          "durationMs": 1503,
           "assertions": 1
         },
         {
@@ -474,7 +474,7 @@
           "id": "B-024",
           "name": "download retains native bytes and available metadata",
           "status": "passed",
-          "durationMs": 3,
+          "durationMs": 2,
           "assertions": 5
         },
         {
@@ -488,28 +488,28 @@
           "id": "B-026",
           "name": "CORS-hidden Vary never reuses language-specific public bytes",
           "status": "passed",
-          "durationMs": 4,
+          "durationMs": 3,
           "assertions": 7
         },
         {
           "id": "B-027",
           "name": "same-origin configured Vary retains separate language entries",
           "status": "passed",
-          "durationMs": 3,
+          "durationMs": 2,
           "assertions": 5
         },
         {
           "id": "B-028",
           "name": "same-origin unconfigured Vary bypasses cache instead of conflating languages",
           "status": "passed",
-          "durationMs": 4,
+          "durationMs": 3,
           "assertions": 5
         },
         {
           "id": "B-029",
           "name": "native absent and explicitly empty Vary header fields stay distinct",
           "status": "passed",
-          "durationMs": 6,
+          "durationMs": 4,
           "assertions": 12
         },
         {
@@ -530,7 +530,7 @@
           "id": "B-032",
           "name": "sibling AvirxError callback failures retain identity across phases and every terminal",
           "status": "passed",
-          "durationMs": 11,
+          "durationMs": 10,
           "assertions": 63,
           "cases": 30
         },
@@ -552,14 +552,14 @@
           "id": "B-035",
           "name": "buffered body sibling abort keeps current response status and original sibling cause",
           "status": "passed",
-          "durationMs": 3,
+          "durationMs": 2,
           "assertions": 8
         },
         {
           "id": "B-036",
           "name": "native Request serialization preserves final body and explicit versus inferred MIME transitions",
           "status": "passed",
-          "durationMs": 17,
+          "durationMs": 15,
           "assertions": 81,
           "cases": 21
         },
@@ -573,11 +573,11 @@
         }
       ],
       "assertions": 337,
-      "startedAt": "2026-11-02T00:33:59.000Z",
+      "startedAt": "2026-11-02T00:38:53.470Z",
       "cleanupErrors": [],
       "notRunChecks": 0,
       "notRunCheckIds": [],
-      "finishedAt": "2026-11-02T00:34:01.190Z"
+      "finishedAt": "2026-11-02T00:38:55.609Z"
     },
     "browser-firefox.json": {
       "status": "not-run",
@@ -590,9 +590,9 @@
       "browserVersion": "26.5",
       "playwrightVersion": "1.62.1",
       "suite": {
-        "revision": "c1d5e19cf2ccd4a17a74601f17bff25c755b3255",
+        "revision": "2cd5218632e752c2fa05f12612bc1feb6c7fa008",
         "dirty": true,
-        "inputSha256": "378e9f9d282c5d5b6eba45805f70c301604dd5f4baea079fc921ba4764153116"
+        "inputSha256": "35352d277bcba620db43efaf0be6024150ef29729d577f4f65de5820b3a3827c"
       },
       "packageContentSha256": "238259a9ddc4315479161cc7d24ebabfff6cbe5236a037f980753494ccb39423",
       "candidateCommit": "5b1df16e1c55ce9940b20f319529bea1291760fe",
@@ -650,7 +650,7 @@
           "id": "B-002",
           "name": "encoded path and repeated unicode query reach actual HTTP",
           "status": "passed",
-          "durationMs": 12,
+          "durationMs": 16,
           "assertions": 3
         },
         {
@@ -671,14 +671,14 @@
           "id": "B-005",
           "name": "explicit custom MIME remains caller owned through body replacement",
           "status": "passed",
-          "durationMs": 4,
+          "durationMs": 3,
           "assertions": 2
         },
         {
           "id": "B-006",
           "name": "retry resolves refreshed auth each attempt and hook order",
           "status": "passed",
-          "durationMs": 17,
+          "durationMs": 16,
           "assertions": 3
         },
         {
@@ -699,7 +699,7 @@
           "id": "B-009",
           "name": "explicit trusted redirect transmits fixture credential to second origin",
           "status": "passed",
-          "durationMs": 4,
+          "durationMs": 5,
           "assertions": 1
         },
         {
@@ -720,42 +720,42 @@
           "id": "B-012",
           "name": "raw send never creates a new cache entry",
           "status": "passed",
-          "durationMs": 4,
+          "durationMs": 5,
           "assertions": 2
         },
         {
           "id": "B-013",
           "name": "CORS public responses bypass cache despite exposed Vary",
           "status": "passed",
-          "durationMs": 3,
+          "durationMs": 5,
           "assertions": 2
         },
         {
           "id": "B-014",
           "name": "browser cookie sessions and private responses never cache",
           "status": "passed",
-          "durationMs": 3,
+          "durationMs": 5,
           "assertions": 3
         },
         {
           "id": "B-015",
           "name": "auth policy prevents public-response caching",
           "status": "passed",
-          "durationMs": 5,
+          "durationMs": 7,
           "assertions": 2
         },
         {
           "id": "B-016",
           "name": "application mutation and explicit cache invalidation expose new version",
           "status": "passed",
-          "durationMs": 4,
+          "durationMs": 6,
           "assertions": 3
         },
         {
           "id": "B-017",
           "name": "fetch timeout classifies delayed response headers",
           "status": "passed",
-          "durationMs": 13,
+          "durationMs": 14,
           "assertions": 2
         },
         {
@@ -783,14 +783,14 @@
           "id": "B-021",
           "name": "HEAD JSON and async schema transformation follow contract",
           "status": "passed",
-          "durationMs": 4,
+          "durationMs": 3,
           "assertions": 3
         },
         {
           "id": "B-022",
           "name": "HTTP decode and schema errors retain stable kinds",
           "status": "passed",
-          "durationMs": 5,
+          "durationMs": 4,
           "assertions": 7
         },
         {
@@ -811,14 +811,14 @@
           "id": "B-025",
           "name": "contract async input/output parsers execute through installed package",
           "status": "passed",
-          "durationMs": 2,
+          "durationMs": 3,
           "assertions": 1
         },
         {
           "id": "B-026",
           "name": "CORS-hidden Vary never reuses language-specific public bytes",
           "status": "passed",
-          "durationMs": 6,
+          "durationMs": 5,
           "assertions": 7
         },
         {
@@ -839,28 +839,28 @@
           "id": "B-029",
           "name": "native absent and explicitly empty Vary header fields stay distinct",
           "status": "passed",
-          "durationMs": 3,
+          "durationMs": 4,
           "assertions": 12
         },
         {
           "id": "B-030",
           "name": "managed and known direct credentials reject mixed 302/307 chains before the next hop",
           "status": "passed",
-          "durationMs": 7,
+          "durationMs": 10,
           "assertions": 20
         },
         {
           "id": "B-031",
           "name": "explicit trust follows complete 302/307 chains with native POST rewrite and fixture credentials",
           "status": "passed",
-          "durationMs": 8,
+          "durationMs": 9,
           "assertions": 12
         },
         {
           "id": "B-032",
           "name": "sibling AvirxError callback failures retain identity across phases and every terminal",
           "status": "passed",
-          "durationMs": 23,
+          "durationMs": 22,
           "assertions": 63,
           "cases": 30
         },
@@ -875,7 +875,7 @@
           "id": "B-034",
           "name": "native active-fetch sibling abort retains victim identity after server-confirmed dispatch",
           "status": "passed",
-          "durationMs": 4,
+          "durationMs": 5,
           "assertions": 8
         },
         {
@@ -889,7 +889,7 @@
           "id": "B-036",
           "name": "native Request serialization preserves final body and explicit versus inferred MIME transitions",
           "status": "passed",
-          "durationMs": 29,
+          "durationMs": 26,
           "assertions": 81,
           "cases": 21
         },
@@ -897,24 +897,24 @@
           "id": "B-037",
           "name": "safe unusual placeholders preserve encoded bytes while unsafe grammar and dot segments reject",
           "status": "passed",
-          "durationMs": 15,
+          "durationMs": 17,
           "assertions": 37,
           "cases": 37
         }
       ],
       "assertions": 337,
-      "startedAt": "2026-11-02T00:34:01.400Z",
+      "startedAt": "2026-11-02T00:38:55.812Z",
       "cleanupErrors": [],
       "notRunChecks": 0,
       "notRunCheckIds": [],
-      "finishedAt": "2026-11-02T00:34:04.513Z"
+      "finishedAt": "2026-11-02T00:38:59.025Z"
     },
     "review-coverage.json": {
-      "generatedAt": "2026-11-02T00:35:23.765Z",
+      "generatedAt": "2026-11-02T00:39:54.766Z",
       "suite": {
-        "revision": "c1d5e19cf2ccd4a17a74601f17bff25c755b3255",
+        "revision": "2cd5218632e752c2fa05f12612bc1feb6c7fa008",
         "dirty": true,
-        "inputSha256": "378e9f9d282c5d5b6eba45805f70c301604dd5f4baea079fc921ba4764153116"
+        "inputSha256": "35352d277bcba620db43efaf0be6024150ef29729d577f4f65de5820b3a3827c"
       },
       "packageContentSha256": "238259a9ddc4315479161cc7d24ebabfff6cbe5236a037f980753494ccb39423",
       "candidateCommit": "5b1df16e1c55ce9940b20f319529bea1291760fe",
