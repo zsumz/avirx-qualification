@@ -2,15 +2,20 @@
 
 Reviewed the separate consumer suite against Avirx's public compatibility, runtime, API and policy documents. This review examines harness validity and the meaning of results; it does not infer universal correctness from a green run.
 
-## Findings sent to implementation owner
+## Review dispositions
 
-1. **Run provenance needs revalidation.** The original runner read `artifacts/candidate.json` but did not verify that the presently installed package still matched the recorded entry digest, metadata, or declaration set. Installing another dependency can remove or replace an unlisted candidate. Revalidate immediately before qualification entrypoints, and bind every machine report to the candidate SHA/integrity.
-2. **Soak seed overrides initially did not vary cases.** The runner supplied `QUALIFICATION_SEED`, while both test suites originally used hardcoded seeds. Accept and validate that override, and print the actual seed and generated fixture in failures.
-3. **Browser failures initially hid unexecuted checks.** A failed browser check stopped that engine and produced only the checks reached. Keep the complete plan and explicitly mark remaining checks `not-run`, or independently execute bounded checks and continue after cleanup. An unavailable browser is blocked, never passed.
-4. **Report aggregation initially included its own previous output.** Exclude `summary.json` to prevent stale recursive nesting on repeated report commands.
-5. **Connection disposal and concurrency/rate interaction need direct assertions.** The hook-order check alone does not exercise stale rate reservations behind a slow concurrency occupant. Add a real HTTP streaming-retry/response-hook-failure close observation, and a slow concurrency occupant followed by queued starts. These observations demonstrate specific cleanup behavior, not general absence of leaks.
+| Finding | Final review disposition |
+| --- | --- |
+| Installed candidate provenance could drift after preparation | Resolved: every test entrypoint verifies metadata and SHA-256 of every packaged file, including declarations, against the candidate manifest. Machine reports retain the source SHA and tarball integrity. |
+| Soak seed overrides repeated identical cases | Resolved: both suites validate the unsigned 32-bit override and report the actual seed/fixture. The HTTP differential includes a bounded string reducer for semantic mismatches. |
+| Browser fail-fast omitted unexecuted coverage | Resolved: each engine records 25 planned checks and an explicit `notRunChecks` count; unavailable launch is blocked and fails the command. |
+| Report aggregation recursively included prior summary | Resolved: the aggregation excludes its own output. |
+| Disposal and blocked-concurrency/rate interaction lacked direct observations | Resolved: real unfinished responses must close after retry/hook rejection, and queued requests cannot reserve stale starts behind a held concurrency occupant. |
+| Fresh default candidate bootstrap checked a no-checkout clone as dirty | Resolved: preparation now makes a populated clone before cleanliness checks. The owner successfully exercised a fresh default clone/build/pack/install; `artifacts/bootstrap.log` records that run. |
 
-Implementation may resolve these after this memo; current code and result records determine disposition.
+Final CI inspection found read-only repository permissions, pinned official actions, explicit quoted candidate input, separate runtime/compiler/browser lanes and job deadlines. The Node 18.17 compatibility entrypoint and provenance helper use floor-compatible syntax/APIs and avoid policies requiring unavailable native signal composition.
+
+Coverage claims were narrowed to the observed wall-clock-jump checks for TTL/rate and ordinary response metadata. Redirected cache-hit final-URL preservation and response-duration clock-jump interactions remain partial coverage rather than implied passes.
 
 ## Strengths and evidence boundaries
 
