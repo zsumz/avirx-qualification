@@ -1,0 +1,28 @@
+{
+  "name": "avirx-qualification",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Independent packed-consumer qualification of pinned Avirx source",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "candidate": "node scripts/candidate.mjs",
+    "test": "node scripts/run.mjs fast",
+    "test:soak": "node scripts/run.mjs soak",
+    "test:types": "node scripts/types.mjs",
+    "test:compat": "node scripts/node-compat.mjs",
+    "test:browser": "node test/browser.mjs",
+    "test:browsers": "node test/browser.mjs --all",
+    "qualify": "node scripts/run.mjs full",
+    "report": "node scripts/report.mjs",
+    "test:runtime": "node scripts/run.mjs runtime"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1",
+    "typescript": "5.9.3",
+    "typescript-current": "npm:typescript@7.0.2",
+    "typescript-minimum": "npm:typescript@5.0.4"
+  }
+}

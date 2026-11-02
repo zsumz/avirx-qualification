@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-02T00:12:12.627Z",
+  "repository": "https://github.com/zsumz/avirx.git",
+  "baselineCommit": "1992ffba1b9fca800196b6fd8a0912cc8a9ddf16",
+  "candidateCommit": "1992ffba1b9fca800196b6fd8a0912cc8a9ddf16",
+  "override": false,
+  "sourceTree": "2e28b77f7de42ea44aeaa40534a12b62470cfb79",
+  "package": {
+    "name": "avirx",
+    "version": "0.1.0",
+    "filename": "avirx-0.1.0.tgz",
+    "integrity": "sha512-hp1mY/ZYx4HhbpVOgFq3WX/Txbj6Iao11J9ex+cvmFmnGtDDk99mGcilSEECX0OAyu7OKiI8CfcZmYrDAXVDlw==",
+    "sha256": "9e837ae385a6746088320311999fd2c863184114350bcd6edaf8cfb688114fc1",
+    "unpackedSize": 167591,
+    "entrySha256": "e748f481af949e2f67f215b216f1eb4b78a0acbffa84aec4638ef0dbf21afcb5",
+    "runtimeDependencies": {}
+  },
+  "toolchain": {
+    "node": "v24.19.0",
+    "npm": "11.17.0",
+    "platform": "darwin",
+    "arch": "arm64"
+  }
+}

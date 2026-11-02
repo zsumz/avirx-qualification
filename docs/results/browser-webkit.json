@@ -1,0 +1,167 @@
+{
+  "engine": "webkit",
+  "status": "passed",
+  "node": "v24.19.0",
+  "browserVersion": "26.5",
+  "playwrightVersion": "1.62.1",
+  "candidateCommit": "1992ffba1b9fca800196b6fd8a0912cc8a9ddf16",
+  "packageIntegrity": "sha512-hp1mY/ZYx4HhbpVOgFq3WX/Txbj6Iao11J9ex+cvmFmnGtDDk99mGcilSEECX0OAyu7OKiI8CfcZmYrDAXVDlw==",
+  "platform": "darwin",
+  "plannedChecks": 25,
+  "checks": [
+    {
+      "name": "installed ESM root exports and native required APIs",
+      "status": "passed",
+      "durationMs": 2,
+      "assertions": 4
+    },
+    {
+      "name": "encoded path and repeated unicode query reach actual HTTP",
+      "status": "passed",
+      "durationMs": 11,
+      "assertions": 3
+    },
+    {
+      "name": "builder and mutable inspection copies stay independent",
+      "status": "passed",
+      "durationMs": 6,
+      "assertions": 3
+    },
+    {
+      "name": "JSON replacement permits native multipart boundary and file bytes",
+      "status": "passed",
+      "durationMs": 4,
+      "assertions": 6
+    },
+    {
+      "name": "explicit custom MIME remains caller owned through body replacement",
+      "status": "passed",
+      "durationMs": 3,
+      "assertions": 2
+    },
+    {
+      "name": "retry resolves refreshed auth each attempt and hook order",
+      "status": "passed",
+      "durationMs": 19,
+      "assertions": 3
+    },
+    {
+      "name": "preview cURL and public state redact managed custom credentials",
+      "status": "passed",
+      "durationMs": 1,
+      "assertions": 3
+    },
+    {
+      "name": "protected redirect never reaches second origin",
+      "status": "passed",
+      "durationMs": 4,
+      "assertions": 3
+    },
+    {
+      "name": "explicit trusted redirect transmits fixture credential to second origin",
+      "status": "passed",
+      "durationMs": 5,
+      "assertions": 1
+    },
+    {
+      "name": "native bearer redirect strips authorization across origins",
+      "status": "passed",
+      "durationMs": 4,
+      "assertions": 1
+    },
+    {
+      "name": "same-origin public cache hit bypasses hooks and returns independent bytes",
+      "status": "passed",
+      "durationMs": 6,
+      "assertions": 4
+    },
+    {
+      "name": "raw send never creates a new cache entry",
+      "status": "passed",
+      "durationMs": 4,
+      "assertions": 2
+    },
+    {
+      "name": "CORS public responses bypass cache despite exposed Vary",
+      "status": "passed",
+      "durationMs": 4,
+      "assertions": 2
+    },
+    {
+      "name": "browser cookie sessions and private responses never cache",
+      "status": "passed",
+      "durationMs": 5,
+      "assertions": 3
+    },
+    {
+      "name": "auth policy prevents public-response caching",
+      "status": "passed",
+      "durationMs": 5,
+      "assertions": 2
+    },
+    {
+      "name": "application mutation and explicit cache invalidation expose new version",
+      "status": "passed",
+      "durationMs": 5,
+      "assertions": 3
+    },
+    {
+      "name": "fetch timeout classifies delayed response headers",
+      "status": "passed",
+      "durationMs": 13,
+      "assertions": 2
+    },
+    {
+      "name": "fetch timeout ends at headers while slow body completes",
+      "status": "passed",
+      "durationMs": 1505,
+      "assertions": 1
+    },
+    {
+      "name": "request signal cancellation remains attached to native streaming body",
+      "status": "passed",
+      "durationMs": 8,
+      "assertions": 2
+    },
+    {
+      "name": "client signal cancellation classifies buffered body on current request",
+      "status": "passed",
+      "durationMs": 5,
+      "assertions": 4
+    },
+    {
+      "name": "HEAD JSON and async schema transformation follow contract",
+      "status": "passed",
+      "durationMs": 4,
+      "assertions": 3
+    },
+    {
+      "name": "HTTP decode and schema errors retain stable kinds",
+      "status": "passed",
+      "durationMs": 5,
+      "assertions": 7
+    },
+    {
+      "name": "user callback failures reject original value from result terminal",
+      "status": "passed",
+      "durationMs": 1,
+      "assertions": 2
+    },
+    {
+      "name": "download retains native bytes and available metadata",
+      "status": "passed",
+      "durationMs": 3,
+      "assertions": 5
+    },
+    {
+      "name": "contract async input/output parsers execute through installed package",
+      "status": "passed",
+      "durationMs": 3,
+      "assertions": 1
+    }
+  ],
+  "assertions": 72,
+  "startedAt": "2026-11-02T00:10:49.844Z",
+  "notRunChecks": 0,
+  "finishedAt": "2026-11-02T00:10:52.329Z"
+}

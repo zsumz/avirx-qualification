@@ -1,0 +1,17 @@
+{
+  "engine": "firefox",
+  "status": "blocked",
+  "node": "v24.19.0",
+  "browserVersion": null,
+  "playwrightVersion": "1.62.1",
+  "candidateCommit": "1992ffba1b9fca800196b6fd8a0912cc8a9ddf16",
+  "packageIntegrity": "sha512-hp1mY/ZYx4HhbpVOgFq3WX/Txbj6Iao11J9ex+cvmFmnGtDDk99mGcilSEECX0OAyu7OKiI8CfcZmYrDAXVDlw==",
+  "platform": "darwin",
+  "plannedChecks": 25,
+  "checks": [],
+  "assertions": 0,
+  "startedAt": "2026-11-02T00:10:13.642Z",
+  "error": "Official Firefox launch timed out before tests. Native plugin-container sandbox extension permission failed; software renderer framebuffer mapping failed. Local machine paths omitted from public evidence.",
+  "notRunChecks": 25,
+  "finishedAt": "2026-11-02T00:10:33.647Z"
+}

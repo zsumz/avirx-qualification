@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-11-02T00:11:55.878Z",
+  "mode": "fast",
+  "candidateCommit": "1992ffba1b9fca800196b6fd8a0912cc8a9ddf16",
+  "packageIntegrity": "sha512-hp1mY/ZYx4HhbpVOgFq3WX/Txbj6Iao11J9ex+cvmFmnGtDDk99mGcilSEECX0OAyu7OKiI8CfcZmYrDAXVDlw==",
+  "toolchain": {
+    "node": "v24.19.0",
+    "platform": "darwin",
+    "arch": "arm64"
+  },
+  "results": [
+    {
+      "name": "node",
+      "command": [
+        "node",
+        "--test",
+        "--test-concurrency=1",
+        "--test-reporter=tap",
+        "test/http.test.mjs",
+        "test/policies.test.mjs"
+      ],
+      "status": "passed",
+      "code": 0,
+      "signal": null,
+      "durationMs": 4428,
+      "tests": 347,
+      "pass": 347,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0
+    },
+    {
+      "name": "types",
+      "command": [
+        "node",
+        "scripts/types.mjs"
+      ],
+      "status": "failed",
+      "code": 1,
+      "signal": null,
+      "durationMs": 1391
+    },
+    {
+      "name": "compat",
+      "command": [
+        "node",
+        "scripts/node-compat.mjs"
+      ],
+      "status": "passed",
+      "code": 0,
+      "signal": null,
+      "durationMs": 124
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "generatedAt": "2026-11-02T00:11:55.749Z",
+  "node": "v24.19.0",
+  "candidateCommit": "1992ffba1b9fca800196b6fd8a0912cc8a9ddf16",
+  "integrity": "sha512-hp1mY/ZYx4HhbpVOgFq3WX/Txbj6Iao11J9ex+cvmFmnGtDDk99mGcilSEECX0OAyu7OKiI8CfcZmYrDAXVDlw==",
+  "results": [
+    {
+      "dependency": "typescript-minimum",
+      "version": "5.0.4",
+      "negativeCases": 22,
+      "status": "failed",
+      "exitCode": 2,
+      "diagnostics": "types/consumer.ts(25,5): error TS2322: Type 'string' is not assignable to type 'string & Function'.\n  Type 'string' is not assignable to type 'Function'."
+    },
+    {
+      "dependency": "typescript",
+      "version": "5.9.3",
+      "negativeCases": 22,
+      "status": "passed",
+      "exitCode": 0,
+      "diagnostics": ""
+    },
+    {
+      "dependency": "typescript-current",
+      "version": "7.0.2",
+      "negativeCases": 22,
+      "status": "passed",
+      "exitCode": 0,
+      "diagnostics": ""
+    }
+  ]
+}

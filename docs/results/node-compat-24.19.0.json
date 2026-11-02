@@ -1,0 +1,52 @@
+{
+  "generatedAt": "2026-11-02T00:11:55.874Z",
+  "node": "v24.19.0",
+  "platform": "darwin",
+  "candidateCommit": "1992ffba1b9fca800196b6fd8a0912cc8a9ddf16",
+  "integrity": "sha512-hp1mY/ZYx4HhbpVOgFq3WX/Txbj6Iao11J9ex+cvmFmnGtDDk99mGcilSEECX0OAyu7OKiI8CfcZmYrDAXVDlw==",
+  "nativeAbortSignalAny": true,
+  "status": "passed",
+  "cases": [
+    {
+      "name": "installed ESM export and metadata boundary",
+      "status": "passed"
+    },
+    {
+      "name": "native fetch JSON, encoded path, repeated query",
+      "status": "passed"
+    },
+    {
+      "name": "JSON POST body and reusable builder",
+      "status": "passed"
+    },
+    {
+      "name": "text and native raw response",
+      "status": "passed"
+    },
+    {
+      "name": "HEAD and 204 undefined JSON",
+      "status": "passed"
+    },
+    {
+      "name": "binary download metadata",
+      "status": "passed"
+    },
+    {
+      "name": "HTTP failure result and custom expected status",
+      "status": "passed"
+    },
+    {
+      "name": "async schema and contract consumer",
+      "status": "passed"
+    },
+    {
+      "name": "bearer auth refresh and inspection redaction",
+      "status": "passed"
+    },
+    {
+      "name": "shared public cache and hook ownership",
+      "status": "passed"
+    }
+  ],
+  "boundary": "Basic installed-package compatibility; policies requiring native AbortSignal.any are exercised in full lanes."
+}

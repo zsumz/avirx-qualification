@@ -1,0 +1,8 @@
+{
+  "repository": "https://github.com/zsumz/avirx.git",
+  "commit": "1992ffba1b9fca800196b6fd8a0912cc8a9ddf16",
+  "reviewedCommit": "ad4590c99cc625eb9d80d63172968dd420b44aa7",
+  "expectedPackage": "avirx",
+  "expectedVersion": "0.1.0",
+  "note": "Merged stabilization source. Version 0.1.0 here identifies this commit's package metadata; never substitute the registry's older 0.1.0."
+}

@@ -1,0 +1,113 @@
+{
+  "generatedAt": "2026-11-02T00:12:18.400Z",
+  "mode": "soak",
+  "candidateCommit": "1992ffba1b9fca800196b6fd8a0912cc8a9ddf16",
+  "packageIntegrity": "sha512-hp1mY/ZYx4HhbpVOgFq3WX/Txbj6Iao11J9ex+cvmFmnGtDDk99mGcilSEECX0OAyu7OKiI8CfcZmYrDAXVDlw==",
+  "toolchain": {
+    "node": "v24.19.0",
+    "platform": "darwin",
+    "arch": "arm64"
+  },
+  "results": [
+    {
+      "name": "soak-1",
+      "command": [
+        "node",
+        "--test",
+        "--test-concurrency=1",
+        "--test-reporter=tap",
+        "test/http.test.mjs",
+        "test/policies.test.mjs"
+      ],
+      "status": "passed",
+      "code": 0,
+      "signal": null,
+      "durationMs": 4390,
+      "tests": 347,
+      "pass": 347,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0
+    },
+    {
+      "name": "soak-3735928559",
+      "command": [
+        "node",
+        "--test",
+        "--test-concurrency=1",
+        "--test-reporter=tap",
+        "test/http.test.mjs",
+        "test/policies.test.mjs"
+      ],
+      "status": "passed",
+      "code": 0,
+      "signal": null,
+      "durationMs": 4605,
+      "tests": 347,
+      "pass": 347,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0
+    },
+    {
+      "name": "soak-1592594996",
+      "command": [
+        "node",
+        "--test",
+        "--test-concurrency=1",
+        "--test-reporter=tap",
+        "test/http.test.mjs",
+        "test/policies.test.mjs"
+      ],
+      "status": "passed",
+      "code": 0,
+      "signal": null,
+      "durationMs": 4534,
+      "tests": 347,
+      "pass": 347,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0
+    },
+    {
+      "name": "soak-4294967295",
+      "command": [
+        "node",
+        "--test",
+        "--test-concurrency=1",
+        "--test-reporter=tap",
+        "test/http.test.mjs",
+        "test/policies.test.mjs"
+      ],
+      "status": "passed",
+      "code": 0,
+      "signal": null,
+      "durationMs": 4442,
+      "tests": 347,
+      "pass": 347,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0
+    },
+    {
+      "name": "soak-20261102",
+      "command": [
+        "node",
+        "--test",
+        "--test-concurrency=1",
+        "--test-reporter=tap",
+        "test/http.test.mjs",
+        "test/policies.test.mjs"
+      ],
+      "status": "passed",
+      "code": 0,
+      "signal": null,
+      "durationMs": 4417,
+      "tests": 347,
+      "pass": 347,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0
+    }
+  ]
+}

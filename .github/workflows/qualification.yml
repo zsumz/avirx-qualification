@@ -1,0 +1,152 @@
+name: Independent qualification
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      candidate_commit:
+        description: 'Optional full Avirx commit SHA (baseline remains pinned in candidate.json)'
+        required: false
+        type: string
+      soak:
+        description: 'Run five deterministic seed lanes'
+        default: true
+        type: boolean
+permissions:
+  contents: read
+concurrency:
+  group: qualify-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  runtime:
+    name: HTTP and policies / Node ${{ matrix.node }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    strategy:
+      fail-fast: false
+      matrix:
+        node: [22, 24, 26]
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+      - uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e
+        with:
+          node-version: ${{ matrix.node }}
+          cache: npm
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Prepare pinned source artifact
+        env:
+          CANDIDATE_COMMIT: ${{ inputs.candidate_commit }}
+        run: |
+          if [ -n "$CANDIDATE_COMMIT" ]; then
+            npm run candidate -- --commit "$CANDIDATE_COMMIT"
+          else
+            npm run candidate
+          fi
+      - run: npm run test:runtime
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: runtime-node-${{ matrix.node }}
+          path: artifacts/
+          retention-days: 14
+  types:
+    name: TypeScript 5.0.4 / 5.9.3 / 7.0.2
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+      - uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Prepare pinned source artifact
+        env:
+          CANDIDATE_COMMIT: ${{ inputs.candidate_commit }}
+        run: |
+          if [ -n "$CANDIDATE_COMMIT" ]; then npm run candidate -- --commit "$CANDIDATE_COMMIT"; else npm run candidate; fi
+      - run: npm run test:types
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: types
+          path: artifacts/
+          retention-days: 14
+  minimum:
+    name: Installed package / Node 18.17.0
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+      - uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Build using supported build toolchain
+        env:
+          CANDIDATE_COMMIT: ${{ inputs.candidate_commit }}
+        run: |
+          if [ -n "$CANDIDATE_COMMIT" ]; then npm run candidate -- --commit "$CANDIDATE_COMMIT"; else npm run candidate; fi
+      - uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e
+        with:
+          node-version: 18.17.0
+      - run: npm run test:compat
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: node-floor
+          path: artifacts/
+          retention-days: 14
+  browser:
+    name: Native ${{ matrix.browser }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    strategy:
+      fail-fast: false
+      matrix:
+        browser: [chromium, firefox, webkit]
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+      - uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Prepare pinned source artifact
+        env:
+          CANDIDATE_COMMIT: ${{ inputs.candidate_commit }}
+        run: |
+          if [ -n "$CANDIDATE_COMMIT" ]; then npm run candidate -- --commit "$CANDIDATE_COMMIT"; else npm run candidate; fi
+      - run: npx playwright install --with-deps ${{ matrix.browser }}
+      - run: npm run test:browser -- --browser=${{ matrix.browser }}
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: browser-${{ matrix.browser }}
+          path: artifacts/
+          retention-days: 14
+  soak:
+    if: github.event_name == 'workflow_dispatch' && inputs.soak
+    name: Bounded five-seed repeatability
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+      - uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Prepare pinned source artifact
+        env:
+          CANDIDATE_COMMIT: ${{ inputs.candidate_commit }}
+        run: |
+          if [ -n "$CANDIDATE_COMMIT" ]; then npm run candidate -- --commit "$CANDIDATE_COMMIT"; else npm run candidate; fi
+      - run: npm run test:soak
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: seed-repeatability
+          path: artifacts/
+          retention-days: 14
